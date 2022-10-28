@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Enemy/EnemyMovement.cs"
 "Assets/Scripts/Enemy/WaveSpawner.cs"
+"Assets/Scripts/Turret/Turret.cs"
 -langversion:9.0
 
 /deterministic

@@ -36,8 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\WaveSpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
+     <None Include="Assets\Assets\Robo&apos;s turret (free)\Shaders\SDR_Structures.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Unity\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
