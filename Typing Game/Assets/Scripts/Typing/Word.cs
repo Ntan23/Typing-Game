@@ -7,14 +7,18 @@ public class Word
 {
    public string word;
 
-[SerializeField]
    public static int AlphaIdx;
 
+   private WordDisplay wordDisplay;
+
     // Constructor
-   public Word(string word)
+   public Word(string word, WordDisplay wordDisplay)
    {
     this.word = word;
     AlphaIdx = 0;
+
+    this.wordDisplay = wordDisplay;
+    wordDisplay.ShowWord(word);
    }
 
    public char GetNextAlphabet()
@@ -26,6 +30,7 @@ public class Word
    {
         AlphaIdx++;
         // Remove alphabet on screen
+        wordDisplay.removeAlpha();
    }
 
    public bool WordTyped()
@@ -34,6 +39,7 @@ public class Word
      if(wordTyped)
      {
         // Remove word on screen
+        wordDisplay.RemoveWord();
      }
      return wordTyped;
    }

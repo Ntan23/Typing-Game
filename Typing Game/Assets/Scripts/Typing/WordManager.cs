@@ -13,9 +13,19 @@ public class WordManager : MonoBehaviour
     }; */
     public List<Word> words;
 
+    public WordSpawner wordSpawner;
+
+  
+    public WordDisplay wordDisplay;
+
     [SerializeField]
     private bool hasActiveWord;
+
+    [SerializeField]
     private Word activeWord;
+
+
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -32,7 +42,9 @@ public class WordManager : MonoBehaviour
 
     public void AddWordToList()
     {
-       Word word = new Word(WordGenerator.GetRandomWord());
+       wordDisplay = wordSpawner.SpawnTheWord();
+
+       Word word = new Word(WordGenerator.GetRandomWord(), wordDisplay);
 
        //Debug Purpose show random word
        //Debug.Log(word.word);
@@ -49,17 +61,22 @@ public class WordManager : MonoBehaviour
             {
                 activeWord.TypeAlphabet();
             }
-                // Remove the mark from the Word
-            else if(Word.AlphaIdx == 3)
-            {
-                Word.AlphaIdx = 0;
-                hasActiveWord = false;
-            }
+
+            // Change active word to another word
+            // else if(Word.AlphaIdx == 3)
+            // {
+            //     // Word.AlphaIdx = 0;
+            //     hasActiveWord = false;
+            // }
         }
         else
         {
             foreach(Word word in words)
             {
+                Word.AlphaIdx = 0;
+
+                //Debug purpose v
+                // Debug.Log(Word.AlphaIdx);
                 if(word.GetNextAlphabet() == alphabet)
                 {
                     // mark curr active word

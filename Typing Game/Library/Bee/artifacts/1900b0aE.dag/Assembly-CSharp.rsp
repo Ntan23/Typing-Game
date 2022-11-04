@@ -356,9 +356,11 @@
 "Assets/Scripts/Enemy/WaveSpawner.cs"
 "Assets/Scripts/Turret/Turret.cs"
 "Assets/Scripts/Typing/Word.cs"
+"Assets/Scripts/Typing/WordDisplay.cs"
 "Assets/Scripts/Typing/WordGenerator.cs"
 "Assets/Scripts/Typing/WordInput.cs"
 "Assets/Scripts/Typing/WordManager.cs"
+"Assets/Scripts/Typing/WordSpawner.cs"
 -langversion:9.0
 
 /deterministic
