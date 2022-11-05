@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public Transform target;
+    [Header("Attributes")]
     public float range = 15f;
+    public float fireRate = 1.0f;
+    private float fireCountdown = 0.0f;
+
+    [Header("Enemy & Turret Stuff")]
+    public Transform target;
     public string enemyTag = "Enemy";
+    public GameObject bullet;
+    public Transform firePoint;
     public Transform partToRotate;
-    public float turnSpeed = 5.0f;
+    private float turnSpeed = 5.0f;
+    private bool noTarget = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,52 +26,79 @@ public class Turret : MonoBehaviour
 
     void UpdateTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float enemyDistance;
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-
-        foreach (GameObject enemy in enemies)
+        if(noTarget == true)
         {
-            enemyDistance = Vector3.Distance(transform.position,enemy.transform.position);
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+            float enemyDistance;
+            float shortestDistance = Mathf.Infinity;
+            GameObject nearestEnemy = null;
 
-            if(shortestDistance > enemyDistance)
+            foreach (GameObject enemy in enemies)
             {
-                shortestDistance = enemyDistance;
-                nearestEnemy = enemy;
-            }
-        }
+                enemyDistance = Vector3.Distance(transform.position,enemy.transform.position);
 
-        if(nearestEnemy != null && shortestDistance <= range)
-        {
-            target = nearestEnemy.transform;
-        }
-        else
-        {
-            target = null;
+                if(shortestDistance > enemyDistance)
+                {
+                    shortestDistance = enemyDistance;
+                    nearestEnemy = enemy;
+                }
+            }
+
+            if(nearestEnemy != null && shortestDistance <= range)
+            {
+                target = nearestEnemy.transform;
+            }
+            else
+            {
+                target = null;
+            }
+
+            noTarget = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
+        if(target != null)
         {
-            return;
+            //Target Lock On
+            Vector3 direction = target.position - transform.position;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,turnSpeed * Time.deltaTime).eulerAngles;
+            partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
+        
+            if(fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1.0f/fireRate;
+            }
+
+            fireCountdown-=Time.deltaTime;
         }
 
-        //Target Lock On
-        Vector3 direction = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,turnSpeed * Time.deltaTime).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
+        if(target == null || Vector3.Distance(transform.position,target.transform.position) > range)
+        {
+            //Update Target
+            noTarget = true;
+        }
+    }
+
+    void Shoot()
+    {
+        GameObject bulletGO = (GameObject) Instantiate(bullet,firePoint.position,firePoint.rotation);
+
+        Bullet bulletScript = bulletGO.GetComponent<Bullet>();
+
+        if(bulletScript != null) 
+        {
+            bulletScript.Search(target);
+        }
     }
 
     private void OnDrawGizmosSelected() 
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position,range); 
-    }
-        
-    
+    }   
 }
