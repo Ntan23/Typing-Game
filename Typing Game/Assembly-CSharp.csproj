@@ -42,10 +42,13 @@
      <Compile Include="Assets\Scripts\Enemy\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Typing\WordDisplay.cs" />
      <Compile Include="Assets\Scripts\Typing\WordInput.cs" />
+     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret.cs" />
      <Compile Include="Assets\Scripts\Typing\Word.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Turret\TurretContainer.cs" />
+     <Compile Include="Assets\Scripts\Manager\BuildManager.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
      <None Include="Assets\Assets\Robo&apos;s turret (free)\Shaders\SDR_Structures.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Unity\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
