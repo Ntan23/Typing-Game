@@ -36,7 +36,7 @@ public class WordManager : MonoBehaviour
         // }
         
         AddWordToList();
-        AddWordToList();
+        // AddWordToList();
     }
 
 
@@ -95,6 +95,7 @@ public class WordManager : MonoBehaviour
         {
             hasActiveWord = false;
             words.Remove(activeWord);
+            AddWordToList();
         }
     }
     // Update is called once per frame
