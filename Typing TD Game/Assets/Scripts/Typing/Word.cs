@@ -11,6 +11,8 @@ public class Word
 
    private WordDisplay wordDisplay;
 
+   private WordManager wordManager;
+
     // Constructor
    public Word(string word, WordDisplay wordDisplay)
    {
@@ -39,8 +41,9 @@ public class Word
      if(wordTyped)
      {
         // Remove word on screen
-        wordDisplay.RemoveWord();
+         wordDisplay.RemoveWord();
      }
      return wordTyped;
    }
+
 }

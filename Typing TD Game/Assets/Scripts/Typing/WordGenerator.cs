@@ -17,8 +17,8 @@ public class WordGenerator : MonoBehaviour
         return randWord;
     }
 
-    private void Start() {
-
+    private void Start()
+    {
         //Debug.Log(wordList.Length);
     }
 }
