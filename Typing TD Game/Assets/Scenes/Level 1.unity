@@ -11821,6 +11821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurret: {fileID: 6437514599564449339, guid: d98b7827c9438904487d35729c71f0f9, type: 3}
+  buildEffect: {fileID: 7979435594461129623, guid: 70b3cbc261f8887459b4a417878effab, type: 3}
 --- !u!114 &1567107976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12341,6 +12342,7 @@ GameObject:
   - component: {fileID: 1630713531}
   - component: {fileID: 1630713533}
   - component: {fileID: 1630713532}
+  - component: {fileID: 1630713534}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -12410,6 +12412,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630713530}
   m_CullTransparentMesh: 1
+--- !u!114 &1630713534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630713530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401bf4d8393514948aa55923f35078bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1637087972
 PrefabInstance:
   m_ObjectHideFlags: 0

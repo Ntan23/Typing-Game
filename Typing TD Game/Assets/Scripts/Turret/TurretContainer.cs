@@ -17,8 +17,8 @@ public class TurretContainer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buildManager=BuildManager.instance;
-        objectRenderer=GetComponent<Renderer>();
+        buildManager = BuildManager.instance;
+        objectRenderer = GetComponent<Renderer>();
         startColor = objectRenderer.material.color;
     }
 
@@ -26,6 +26,7 @@ public class TurretContainer : MonoBehaviour
     {
         return transform.position + turretOffset;
     }
+
     private void OnMouseEnter() 
     {
         if(EventSystem.current.IsPointerOverGameObject())
@@ -38,14 +39,21 @@ public class TurretContainer : MonoBehaviour
             return;
         }
 
-        if(buildManager.HasMoney)
+        if(turret != null)
         {
-            objectRenderer.material.color = hoverColor;
+            hoverColor = Color.red;
         }
-        else if(!buildManager.HasMoney)
-        {
-            objectRenderer.material.color = Color.red;
-        }
+
+        objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
+
+        // if(buildManager.HasMoney)
+        // {
+        //     objectRenderer.material.color = hoverColor;
+        // }
+        // else if(!buildManager.HasMoney)
+        // {
+        //     objectRenderer.material.color = Color.red;
+        // }
     }
 
     private void OnMouseExit()

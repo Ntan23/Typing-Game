@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour
 
     private TurretBlueprint turretToBuild;
     public GameObject standardTurret;
+    public GameObject buildEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -69,11 +70,15 @@ public class BuildManager : MonoBehaviour
         }
 
         PlayerStats.money -= turretToBuild.cost;
+        MoneyUI.needUpdate = true;
 
         GameObject turret = (GameObject) Instantiate(turretToBuild.turret,container.GetBuildPosition(),Quaternion.identity);
     
         container.turret = turret;
-        Debug.Log("Turret Bild! Money left : "+PlayerStats.money);
+        Debug.Log("Turret Build! Money left : "+PlayerStats.money);
+    
+        GameObject effect = (GameObject) Instantiate(buildEffect,container.GetBuildPosition(),Quaternion.identity);
+        Destroy(effect,1.0f);
     }
 
     public void SelectTurretToBuild(TurretBlueprint turret)
