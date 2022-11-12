@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour
 {
     public TurretBlueprint standardTurret;
     BuildManager buildManager;
+    bool isClicked = true;
     
     // Start is called before the first frame update
     void Start()
@@ -15,8 +16,23 @@ public class Shop : MonoBehaviour
     
     public void SelectStandardTurret()
     {
-        Debug.Log("Standard Turret Selected");
-        buildManager.SelectTurretToBuild(standardTurret);
+        if(isClicked)
+        {
+            Debug.Log("Standard Turret Selected");
+            buildManager.SelectTurretToBuild(standardTurret);
+            isClicked = false;
+        }
+        else if(!isClicked)
+        {
+            UnSelectTurret();
+            isClicked = true;
+        }
+    }
+
+    public void UnSelectTurret()
+    {
+        Debug.Log("Unselect Successful !");
+        buildManager.SelectTurretToBuild(null);
     }
 
     // Update is called once per frame

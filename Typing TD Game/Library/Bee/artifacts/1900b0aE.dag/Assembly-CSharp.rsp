@@ -370,6 +370,7 @@
 "Assets/Scripts/Typing/WordInput.cs"
 "Assets/Scripts/Typing/WordManager.cs"
 "Assets/Scripts/Typing/WordSpawner.cs"
+"Assets/Scripts/UI/Health.cs"
 "Assets/Scripts/UI/MoneyUI.cs"
 "Assets/TextMesh_Pro/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh_Pro/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

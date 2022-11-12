@@ -17,11 +17,11 @@ public class MoneyUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(needUpdate == false)
+        if(!needUpdate)
         {
             return;
         }
-        else if(needUpdate == true)
+        else if(needUpdate)
         {
             text.text = "$" + PlayerStats.money.ToString();
             needUpdate = false;

@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public static int money;
     public int startMoney = 500;
+    public static float health = 100;
 
     // Start is called before the first frame update
     void Start()
