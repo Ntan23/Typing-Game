@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     {
         healthBar = GetComponent<Image>();
         startingHealth = PlayerStats.health;
+        healthBar.color = Color.green;
     }
 
     // Update is called once per frame

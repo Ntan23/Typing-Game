@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
     public TurretBlueprint standardTurret;
     BuildManager buildManager;
     bool isClicked = true;
+    public Color selectedColor;
     
     // Start is called before the first frame update
     void Start()
@@ -14,16 +16,18 @@ public class Shop : MonoBehaviour
         buildManager = BuildManager.instance;
     }
     
-    public void SelectStandardTurret()
+    public void SelectStandardTurret(Image buttonImg)
     {
         if(isClicked)
         {
+            buttonImg.color = selectedColor;
             Debug.Log("Standard Turret Selected");
             buildManager.SelectTurretToBuild(standardTurret);
             isClicked = false;
         }
         else if(!isClicked)
         {
+            buttonImg.color = Color.white;
             UnSelectTurret();
             isClicked = true;
         }
