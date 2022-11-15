@@ -376,6 +376,7 @@
 "Assets/Scripts/UI/GameOver.cs"
 "Assets/Scripts/UI/Health.cs"
 "Assets/Scripts/UI/MoneyUI.cs"
+"Assets/Scripts/UI/TurretUI.cs"
 "Assets/TextMesh_Pro/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh_Pro/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh_Pro/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

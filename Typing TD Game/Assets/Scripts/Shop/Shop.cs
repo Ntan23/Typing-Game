@@ -7,7 +7,7 @@ public class Shop : MonoBehaviour
 {
     public TurretBlueprint standardTurret;
     BuildManager buildManager;
-    bool isClicked = true;
+    public static bool isClicked = true;
     public Color selectedColor;
     
     // Start is called before the first frame update

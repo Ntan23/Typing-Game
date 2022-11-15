@@ -45,7 +45,7 @@ public class TurretContainer : MonoBehaviour
         }
 
         objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
-
+        
         // if(buildManager.HasMoney)
         // {
         //     objectRenderer.material.color = hoverColor;
@@ -67,15 +67,16 @@ public class TurretContainer : MonoBehaviour
         {
             return;
         }
-        
-        if(!buildManager.CanBuild)
-        {
-            return;
-        }
 
         if(turret != null)
         {
-            Debug.Log("You Can't Build Here!");
+            buildManager.SelectContainer(this);
+            // Debug.Log("You Can't Build Here!");
+            return;
+        }
+
+        if(!buildManager.CanBuild)
+        {
             return;
         }
 

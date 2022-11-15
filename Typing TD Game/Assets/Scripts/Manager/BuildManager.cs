@@ -1,6 +1,9 @@
+using System.Net.Mime;
+using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour
 {
@@ -20,8 +23,11 @@ public class BuildManager : MonoBehaviour
     }
 
     private TurretBlueprint turretToBuild;
+    private TurretContainer selectedTurretContainer;
     public GameObject standardTurret;
     public GameObject buildEffect;
+    public TurretUI turretUI;
+    public Image[] buttonImg;
 
     // Start is called before the first frame update
     void Start()
@@ -81,8 +87,36 @@ public class BuildManager : MonoBehaviour
         Destroy(effect,1.0f);
     }
 
+    public void SelectContainer(TurretContainer container)
+    {
+        Shop.isClicked = true;
+
+        for(int i = 0;i < buttonImg.Length;i++)
+        {
+            buttonImg[i].color = Color.white;
+        }
+
+        if(selectedTurretContainer == container)
+        {
+            DeselectContainer();
+            return;
+        }
+
+        selectedTurretContainer = container;
+        turretToBuild = null;
+
+        turretUI.SetTarget(container);
+    }
+
+    public void DeselectContainer()
+    {
+        selectedTurretContainer = null;
+        turretUI.HideUI();
+    }
+
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        DeselectContainer();
     }
 }
