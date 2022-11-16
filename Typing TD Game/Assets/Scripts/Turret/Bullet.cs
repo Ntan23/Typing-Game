@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Transform target;
+    [SerializeField] private float damage;
     public float speed = 70f;
     public GameObject impactFX;
     
@@ -38,7 +39,6 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-
     }
 
     void HitTarget()
@@ -46,7 +46,8 @@ public class Bullet : MonoBehaviour
         GameObject effects = (GameObject) Instantiate(impactFX,transform.position,transform.rotation);
         
         Destroy(effects,2.0f);
-        Destroy(target.gameObject);
+        // Destroy(target.gameObject);
+        target.GetComponent<Enemy>().TakeDamage(damage);
         Destroy(this.gameObject);
     }
 }

@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
-
     private int ManaCount = 0;
-
     public Text Manatext;
 
     // Start is called before the first frame update

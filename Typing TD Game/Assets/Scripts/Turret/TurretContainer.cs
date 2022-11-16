@@ -44,8 +44,6 @@ public class TurretContainer : MonoBehaviour
             hoverColor = Color.red;
         }
 
-        objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
-        
         // if(buildManager.HasMoney)
         // {
         //     objectRenderer.material.color = hoverColor;
@@ -54,6 +52,11 @@ public class TurretContainer : MonoBehaviour
         // {
         //     objectRenderer.material.color = Color.red;
         // }
+    }
+
+    void OnMouseOver()
+    {
+        objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
     }
 
     private void OnMouseExit()
