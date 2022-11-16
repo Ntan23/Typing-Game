@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WordManager : MonoBehaviour
 {
@@ -11,11 +13,12 @@ public class WordManager : MonoBehaviour
         {"anjing","dog"}
 
     }; */
+    #region Word
+   [Header("Word Section")]
     public List<Word> words;
 
     public WordSpawner wordSpawner;
 
-  
     public WordDisplay wordDisplay;
 
     [SerializeField]
@@ -24,8 +27,17 @@ public class WordManager : MonoBehaviour
     [SerializeField]
     private Word activeWord;
 
+    #endregion
 
     
+
+    #region Mana
+    [Header("Mana Section")]
+    public Mana mana;
+
+    #endregion
+
+//    private CooldownTimer cooldownTimer;
 
     // Start is called before the first frame update
     private void Start()
@@ -37,6 +49,8 @@ public class WordManager : MonoBehaviour
         
         AddWordToList();
         // AddWordToList();
+
+        
     }
 
 
@@ -61,6 +75,7 @@ public class WordManager : MonoBehaviour
             {
                 activeWord.TypeAlphabet();
             }
+
 
             // Change active word to another word
             // else if(Word.AlphaIdx == 3)
@@ -93,11 +108,22 @@ public class WordManager : MonoBehaviour
 
         if(hasActiveWord && activeWord.WordTyped())
         {
+            mana.IncreaseMana();
             hasActiveWord = false;
             words.Remove(activeWord);
-            AddWordToList();
+            StartCoroutine(WordDelay(1.5f));
+            // cooldownTimer.Begin(3);
+           
         }
     }
+
+    public IEnumerator WordDelay(float Time){
+       yield return new WaitForSeconds(Time);
+       Debug.Log(Time);
+       AddWordToList();
+    }
+
+  
     // Update is called once per frame
     void Update()
     {
