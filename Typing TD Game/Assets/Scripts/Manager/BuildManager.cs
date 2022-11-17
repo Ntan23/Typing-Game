@@ -63,7 +63,7 @@ public class BuildManager : MonoBehaviour
     {
         get 
         {
-            return PlayerStats.money >= turretToBuild.cost;
+            return turretToBuild.cost <= PlayerStats.money;
         }
     }
 

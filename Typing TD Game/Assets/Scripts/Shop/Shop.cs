@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public TurretBlueprint standardTurret;
+    public TurretBlueprint[] turrets;
     BuildManager buildManager;
     public static bool isClicked = true;
+    public static bool canUpdateColor;
     public Color selectedColor;
+    Image tempImage;
     
     // Start is called before the first frame update
     void Start()
@@ -18,18 +20,55 @@ public class Shop : MonoBehaviour
     
     public void SelectStandardTurret(Image buttonImg)
     {
+        if(tempImage != null)
+        {
+            tempImage.color = Color.white;
+            UnSelectTurret();
+        }
+
+        tempImage = buttonImg;
+        
         if(isClicked)
         {
             buttonImg.color = selectedColor;
             Debug.Log("Standard Turret Selected");
-            buildManager.SelectTurretToBuild(standardTurret);
+            buildManager.SelectTurretToBuild(turrets[0]);
             isClicked = false;
+            canUpdateColor = true;
         }
         else if(!isClicked)
         {
             buttonImg.color = Color.white;
             UnSelectTurret();
             isClicked = true;
+            canUpdateColor = false;
+        }
+    }
+
+    public void SelectAoETurret(Image buttonImg)
+    {   
+        if(tempImage != null)
+        {
+            tempImage.color = Color.white;
+            UnSelectTurret();
+        }
+
+        tempImage = buttonImg;
+
+        if(isClicked)
+        {
+            buttonImg.color = selectedColor;
+            Debug.Log("AoE Turret Selected");
+            buildManager.SelectTurretToBuild(turrets[1]);
+            isClicked = false;
+            canUpdateColor = true;
+        }
+        else if(!isClicked)
+        {
+            buttonImg.color = Color.white;
+            UnSelectTurret();
+            isClicked = true;
+            canUpdateColor = false;
         }
     }
 
@@ -39,6 +78,10 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(null);
     }
 
+    void ChangeToOriginalColor()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {

@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage (float damage)
 	{
 		health -= damage;
-        Debug.Log("Health : "+ health);
 
 		// healthBar.fillAmount = health / startHealth;
 

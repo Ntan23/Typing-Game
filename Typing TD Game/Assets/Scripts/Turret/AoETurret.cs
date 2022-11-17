@@ -12,6 +12,7 @@ public class AoETurret : MonoBehaviour
     [SerializeField] private float slowSpeed;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
+    private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class AoETurret : MonoBehaviour
 
     void CheckForEnemy()
     {
+        enemyCount = 0;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         foreach (GameObject enemy in enemies)
@@ -43,10 +45,6 @@ public class AoETurret : MonoBehaviour
                 enemy.GetComponent<NavMeshAgent>().speed = startSpeed;
                 enemy.GetComponent<NavMeshAgent>().acceleration = startSpeed;
             }
-            else if(enemyDistance <= attackRadius+5)
-            {
-                StartCoroutine(CastEffect(0.8f));
-            }
         }
 
         Collider[] colliders = Physics.OverlapSphere(transform.position,attackRadius,enemyLayer);
@@ -55,6 +53,9 @@ public class AoETurret : MonoBehaviour
         {
             if(c.CompareTag("Enemy"))
             {
+                enemyCount++;
+                Debug.Log("Enemy Count : "+enemyCount);
+                StartCoroutine(CastEffect(0.8f));
                 HitTarget(c.transform);
                 Debug.Log("Enemy Targeted");
             }

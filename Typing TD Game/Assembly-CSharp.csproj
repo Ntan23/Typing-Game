@@ -39,18 +39,23 @@
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Scripts\Typing\WordSpawner.cs" />
      <Compile Include="Assets\Scripts\Shop\Shop.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\Typing\WordGenerator.cs" />
      <Compile Include="Assets\Scripts\UI\TurretUI.cs" />
      <Compile Include="Assets\Scripts\Typing\WordManager.cs" />
      <Compile Include="Assets\Scripts\Enemy\WaveSpawner.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Scripts\Typing\WordDisplay.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\Scripts\Turret\AoETurret.cs" />
      <Compile Include="Assets\Scripts\Turret\TurretContainer.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\Scripts\Typing\WordInput.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -60,6 +65,7 @@
      <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -67,44 +73,38 @@
      <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Scripts\UI\MoneyUI.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Typing\CooldownTimer.cs" />
      <Compile Include="Assets\Scripts\Typing\Mana.cs" />
      <Compile Include="Assets\Scripts\Typing\Word.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Turret\TurretBlueprint.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\Scripts\UI\Health.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\Manager\PlayerStats.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Scripts\Turret\AoETurret.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
@@ -802,9 +802,6 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -813,6 +810,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
@@ -852,29 +852,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{258210ee-dfa8-aa81-3f12-e92e34709d35}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{06a83634-e5cc-f03e-4d95-d8f017cffbcb}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{06298ccb-99ed-449c-aabf-47db4312feb8}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{996a5ee2-78c9-8505-a42b-6f90ac961477}</Project>
-      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
       <Project>{8a0d670d-974f-eb4b-1a6b-03d975fc9b00}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{06a83634-e5cc-f03e-4d95-d8f017cffbcb}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{996a5ee2-78c9-8505-a42b-6f90ac961477}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{dced6028-e0e4-eb68-4d6d-ec38fe6fdc41}</Project>
       <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{258210ee-dfa8-aa81-3f12-e92e34709d35}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

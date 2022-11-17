@@ -36,10 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_ExpressionParser.cs" />
      <Compile Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_BuildShaderPreprocessor.cs" />
      <Compile Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_Styles.cs" />
      <Compile Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_MaterialInspector.cs" />
+     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR_ExpressionParser.cs" />
      <None Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Editor\CFXR Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Unity\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
