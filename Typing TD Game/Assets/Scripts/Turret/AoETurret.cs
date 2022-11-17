@@ -7,17 +7,16 @@ public class AoETurret : MonoBehaviour
 {
     [SerializeField] private float attackRadius;
     [SerializeField] private float damage;
-    [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private float startSpeed;
     [SerializeField] private float slowSpeed;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
-    private int enemyCount;
+    // private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CheckForEnemy",0.0f,1.0f);
+        InvokeRepeating("CheckForEnemy",1.0f,1.0f);
     }
 
     // Update is called once per frame
@@ -28,7 +27,7 @@ public class AoETurret : MonoBehaviour
 
     void CheckForEnemy()
     {
-        enemyCount = 0;
+        // enemyCount = 0;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         foreach (GameObject enemy in enemies)
@@ -47,17 +46,16 @@ public class AoETurret : MonoBehaviour
             }
         }
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position,attackRadius,enemyLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position,attackRadius);
 
         foreach(Collider c in colliders)
         {
             if(c.CompareTag("Enemy"))
             {
-                enemyCount++;
-                Debug.Log("Enemy Count : "+enemyCount);
-                StartCoroutine(CastEffect(0.8f));
+                // enemyCount++;
+                // Debug.Log("Enemy Count : "+enemyCount);
+                StartCoroutine(CastEffect(0.9f));
                 HitTarget(c.transform);
-                Debug.Log("Enemy Targeted");
             }
         }
     }
@@ -68,10 +66,20 @@ public class AoETurret : MonoBehaviour
 
         Destroy(effects,2.0f);
 
-        //Slow The Enemy
+        //Slow The Enemy And Damage The Enemy
         target.GetComponent<NavMeshAgent>().speed = slowSpeed;
         target.GetComponent<NavMeshAgent>().acceleration = slowSpeed;
-        target.GetComponent<Enemy>().TakeDamage(damage);
+        Damage(target);
+    }
+
+    void Damage(Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if(e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     IEnumerator CastEffect(float waitTime)
