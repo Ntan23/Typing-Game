@@ -37,7 +37,10 @@ public class WordManager : MonoBehaviour
 
     #endregion
 
-//    private CooldownTimer cooldownTimer;
+   private CooldownTimer cooldownTimer;
+
+   private Translation translation;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -46,9 +49,11 @@ public class WordManager : MonoBehaviour
         // {
         //     Debug.Log(kamus["anjing"]);
         // }
-        
+        cooldownTimer = FindObjectOfType<CooldownTimer>();
         AddWordToList();
         // AddWordToList();
+        translation = FindObjectOfType<Translation>();
+
 
         
     }
@@ -111,15 +116,25 @@ public class WordManager : MonoBehaviour
             mana.IncreaseMana();
             hasActiveWord = false;
             words.Remove(activeWord);
+
+            // Debug purpose indoWord
+            // Debug.Log(WordGenerator.indoWord);
+
+            translation.gameObject.SetActive(true);
+            translation.showTranslation(WordGenerator.indoWord);
+           cooldownTimer.gameObject.SetActive(true);
             StartCoroutine(WordDelay(1.5f));
-            // cooldownTimer.Begin(3);
+            // cooldownTimer.Begin(3);\
            
         }
     }
 
     public IEnumerator WordDelay(float Time){
-       yield return new WaitForSeconds(Time);
-       Debug.Log(Time);
+       cooldownTimer.Begin(Time);
+       yield return new WaitForSeconds(Time+0.5f);
+    //    Debug purpose Time
+    //    Debug.Log(Time);
+       translation.isshow = false;
        AddWordToList();
     }
 
