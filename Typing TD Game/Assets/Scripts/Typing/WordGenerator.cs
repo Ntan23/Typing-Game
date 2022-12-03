@@ -11,7 +11,7 @@ public class WordGenerator : MonoBehaviour
 
     private static string[] indoList =
     {
-        "toples","tekan","acar","terima","pengunjung","tinta","mencegah","menjijikan","terhenti","santuy","lengan","tegas","syukur","kurus","awal","senang","perintah","gratis","sinyal"
+        "toples","tekan","acar","terima","pengunjung","tinta","mencegah","menjijikan","terhenti","santai","lengan","tegas","syukur","kurus","awal","senang","perintah","gratis","sinyal"
     };
 
     public static string indoWord;
@@ -22,8 +22,6 @@ public class WordGenerator : MonoBehaviour
         string randWord = wordList[randIndex];
         indoWord = indoList[randIndex];
         return randWord;
-
-    
     }
 
     private void Start()

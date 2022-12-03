@@ -28,7 +28,6 @@ public class WordManager : MonoBehaviour
     private Word activeWord;
 
     #endregion
-
     
 
     #region Mana
@@ -53,9 +52,6 @@ public class WordManager : MonoBehaviour
         AddWordToList();
         // AddWordToList();
         translation = FindObjectOfType<Translation>();
-
-
-        
     }
 
 
@@ -122,7 +118,7 @@ public class WordManager : MonoBehaviour
 
             translation.gameObject.SetActive(true);
             translation.showTranslation(WordGenerator.indoWord);
-           cooldownTimer.gameObject.SetActive(true);
+            cooldownTimer.gameObject.SetActive(true);
             StartCoroutine(WordDelay(1.5f));
             // cooldownTimer.Begin(3);\
            
