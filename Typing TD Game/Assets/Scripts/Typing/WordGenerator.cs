@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class WordGenerator : MonoBehaviour
 {
-    private static string[] wordList =
-    {
-        "jar","tap","pickle","accept","visitor","ink","prevent","disgusting","halting","relax","arm","resolute","grateful","skinny","early","happy","command","free","signal"
-    };
+    [Header("Text Asset")]
+    #region TextAsset
+    [SerializeField]
+    private TextAsset textAssetwordList;
 
-    private static string[] indoList =
-    {
-        "toples","tekan","acar","terima","pengunjung","tinta","mencegah","menjijikan","terhenti","santai","lengan","tegas","syukur","kurus","awal","senang","perintah","gratis","sinyal"
-    };
+    [SerializeField]
+    private TextAsset textAssetindoList;
 
+    #endregion
+
+    #region List
+    private static string[] wordList;
+
+    private static string[] indoList;
+
+    #endregion
+   
     public static string indoWord;
 
     public static string GetRandomWord()
@@ -26,6 +34,18 @@ public class WordGenerator : MonoBehaviour
 
     private void Start()
     {
-        //Debug.Log(wordList.Length);
+       ReadTextAsset();
+
+       // debug purpose
+        Debug.Log(wordList.Length);
+        Debug.Log(indoList.Length);
     }
+
+    private void ReadTextAsset()
+    {
+        wordList = textAssetwordList.text.Split(new string[] {"," ,"\n"}, System.StringSplitOptions.None);
+        indoList = textAssetindoList.text.Split(new string[] {"," ,"\n"}, System.StringSplitOptions.None);
+    }
+
+   
 }

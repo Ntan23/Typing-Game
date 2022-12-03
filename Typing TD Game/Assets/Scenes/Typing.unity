@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 731088385}
   - component: {fileID: 731088386}
   - component: {fileID: 731088387}
+  - component: {fileID: 731088388}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -589,6 +590,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordPrefab: {fileID: 8306428294096595132, guid: e75aa49719c5f7442aae5cc0a26a9b13, type: 3}
   wordCanvas: {fileID: 951505194}
+--- !u!114 &731088388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731088383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c242bf336e0d3984c9028c06a76f2319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAssetwordList: {fileID: 4900000, guid: 727c307f7dc89124fa3d7a7a5de5ae5b, type: 3}
+  textAssetindoList: {fileID: 4900000, guid: 966f7d10abb380a4094afc90ef322097, type: 3}
 --- !u!1 &951505190
 GameObject:
   m_ObjectHideFlags: 0
