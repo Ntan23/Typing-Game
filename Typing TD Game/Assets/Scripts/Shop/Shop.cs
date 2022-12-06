@@ -20,54 +20,62 @@ public class Shop : MonoBehaviour
     
     public void SelectStandardTurret(Image buttonImg)
     {
-        if(tempImage != null)
+        if(turrets[1].isSelected)
         {
-            tempImage.color = Color.white;
+            turrets[1].isSelected = false;
+            tempImage.sprite = turrets[1].unselectedUI;
             UnSelectTurret();
         }
-
+    
         tempImage = buttonImg;
         
-        if(isClicked)
+        
+        if(!turrets[0].isSelected)
         {
             buttonImg.color = selectedColor;
             Debug.Log("Standard Turret Selected");
             buildManager.SelectTurretToBuild(turrets[0]);
-            isClicked = false;
+            turrets[0].isSelected = true;
             canUpdateColor = true;
         }
-        else if(!isClicked)
+        else if(turrets[0].isSelected)
         {
             buttonImg.color = Color.white;
             UnSelectTurret();
-            isClicked = true;
+            Debug.Log("Deselect Standar Turret");
+            turrets[0].isSelected = false;
             canUpdateColor = false;
         }
     }
 
     public void SelectAoETurret(Image buttonImg)
     {   
-        if(tempImage != null)
+        if(turrets[0].isSelected)
         {
+            turrets[0].isSelected = false;
             tempImage.color = Color.white;
+            tempImage.sprite = turrets[0].unselectedUI;
             UnSelectTurret();
         }
-
+        
         tempImage = buttonImg;
 
-        if(isClicked)
+        if(!turrets[1].isSelected)
         {
-            buttonImg.color = selectedColor;
+            buttonImg.sprite = turrets[1].selectedUI;
+            // buttonImg.color = selectedColor;
             Debug.Log("AoE Turret Selected");
             buildManager.SelectTurretToBuild(turrets[1]);
-            isClicked = false;
+            turrets[1].isSelected = true;
             canUpdateColor = true;
         }
-        else if(!isClicked)
+        else if(turrets[1].isSelected)
         {
-            buttonImg.color = Color.white;
+            buttonImg.sprite = turrets[1].unselectedUI;
+            // buttonImg.color = Color.white;
+            Debug.Log("Deselect AoE Turret");
             UnSelectTurret();
-            isClicked = true;
+            turrets[1].isSelected = false;
             canUpdateColor = false;
         }
     }

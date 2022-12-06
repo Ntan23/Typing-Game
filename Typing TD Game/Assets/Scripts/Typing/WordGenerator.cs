@@ -32,13 +32,12 @@ public class WordGenerator : MonoBehaviour
         return randWord;
     }
 
-    private void Start()
+    private void Awake()
     {
-       ReadTextAsset();
-
-       // debug purpose
-        Debug.Log(wordList.Length);
-        Debug.Log(indoList.Length);
+        ReadTextAsset();
+        // debug purpose
+        // Debug.Log(wordList.Length);
+        // Debug.Log(indoList.Length);
     }
 
     private void ReadTextAsset()

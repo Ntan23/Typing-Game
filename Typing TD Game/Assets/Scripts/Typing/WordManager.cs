@@ -67,7 +67,7 @@ public class WordManager : MonoBehaviour
        words.Add(word);
     }
     
-    public void  TypingLetter(char alphabet)
+    public void TypingLetter(char alphabet)
     {
         if(hasActiveWord)
         {
@@ -121,17 +121,17 @@ public class WordManager : MonoBehaviour
             cooldownTimer.gameObject.SetActive(true);
             StartCoroutine(WordDelay(1.5f));
             // cooldownTimer.Begin(3);\
-           
         }
     }
 
-    public IEnumerator WordDelay(float Time){
-       cooldownTimer.Begin(Time);
-       yield return new WaitForSeconds(Time+0.5f);
-    //    Debug purpose Time
-    //    Debug.Log(Time);
-       translation.isshow = false;
-       AddWordToList();
+    public IEnumerator WordDelay(float Time)
+    {
+        cooldownTimer.Begin(Time);
+        yield return new WaitForSeconds(Time+0.5f);
+        //Debug purpose Time
+        //Debug.Log(Time);
+        translation.isshow = false;
+        AddWordToList();
     }
 
   

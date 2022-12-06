@@ -89,13 +89,6 @@ public class BuildManager : MonoBehaviour
 
     public void SelectContainer(TurretContainer container)
     {
-        Shop.isClicked = true;
-
-        for(int i = 0;i < buttonImg.Length;i++)
-        {
-            buttonImg[i].color = Color.white;
-        }
-
         if(selectedTurretContainer == container)
         {
             DeselectContainer();

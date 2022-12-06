@@ -6,18 +6,19 @@ using TMPro;
 
 public class Translation : MonoBehaviour
 {
+    [SerializeField]
     private TextMeshProUGUI text;
 
     [SerializeField]
-    private GameObject goTranslation;
+    private GameObject translateContainer;
+    // private GameObject goTranslation;
 
     public bool isshow;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        goTranslation = FindObjectOfType<GameObject>();
+        // goTranslation = FindObjectOfType<GameObject>();
         text.text = "";
     }
 
@@ -26,16 +27,20 @@ public class Translation : MonoBehaviour
         isshow = true;
         // Debug Purpose isshow
         // Debug.Log(isshow);
-        text.text = "Indo : "+word;
+        text.text = word;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isshow) gameObject.SetActive(true);
-
-        if(!isshow) gameObject.SetActive(false);
-        
+        if(isshow)
+        {
+            translateContainer.SetActive(true);
+        }
+        else if(!isshow)
+        {
+            translateContainer.SetActive(false);
+        } 
     }
 
 }
