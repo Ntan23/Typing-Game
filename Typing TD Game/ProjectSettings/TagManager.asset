@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - Cooldown
   - MoneyBar
+  - transcontainer
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,9 @@ public class Translation : MonoBehaviour
     private GameObject translateContainer;
     // private GameObject goTranslation;
 
+    [SerializeField]
+    private Animator anim;
+
     public bool isshow;
 
     // Start is called before the first frame update
@@ -20,6 +23,7 @@ public class Translation : MonoBehaviour
     {
         // goTranslation = FindObjectOfType<GameObject>();
         text.text = "";
+        anim=GameObject.FindGameObjectWithTag("transcontainer").GetComponent<Animator>();
     }
 
     public void showTranslation(string word)

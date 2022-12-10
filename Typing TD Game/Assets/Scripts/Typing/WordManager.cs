@@ -36,6 +36,9 @@ public class WordManager : MonoBehaviour
 
     #endregion
 
+    [SerializeField]
+    // private Animator anim;
+
    private CooldownTimer cooldownTimer;
 
    private Translation translation;
@@ -52,6 +55,7 @@ public class WordManager : MonoBehaviour
         AddWordToList();
         // AddWordToList();
         translation = FindObjectOfType<Translation>();
+        
     }
 
 
@@ -63,8 +67,10 @@ public class WordManager : MonoBehaviour
 
        //Debug Purpose show random word
        //Debug.Log(word.word);
-
+       
        words.Add(word);
+       // play animation
+    //    anim.Play("TextFadein");
     }
     
     public void TypingLetter(char alphabet)

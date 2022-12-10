@@ -9,6 +9,9 @@ public class WordDisplay : MonoBehaviour
     // private Text text;
     private TextMeshProUGUI text;
 
+    [SerializeField]
+    // private Animator anim;
+
     public void ShowWord(string word)
     {
         text = GetComponent<TextMeshProUGUI>();
@@ -26,6 +29,11 @@ public class WordDisplay : MonoBehaviour
     {
         // pool idk
         Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        // anim = GetComponent<Animator>();
     }
 
     private void Update() {
