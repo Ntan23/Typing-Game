@@ -23,7 +23,7 @@ public class MoneyUI : MonoBehaviour
         }
         else if(needUpdate)
         {
-            text.text = "$" + PlayerStats.money.ToString();
+            text.text = PlayerStats.money.ToString();
             needUpdate = false;
         }
     }

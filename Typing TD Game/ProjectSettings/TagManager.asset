@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - FxTemporaire
   - Cooldown
+  - MoneyBar
   layers:
   - Default
   - TransparentFX

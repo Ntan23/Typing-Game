@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     public static int money;
+    public static float moneyBar;
     public int startMoney = 500;
     public static float health;
     public float startingHealth = 100;

@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 	[Header("Unity Stuff")]
 	public Image healthBar;
 	public GameObject healthImage;
+	public Image moneyBar;
 	private bool isDead = false;
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage (float damage)
 	{
 		health -= damage;
-	
+		
 		UpdateHealthBar();
 
 		if(health <= 0 && !isDead) 
@@ -38,10 +39,16 @@ public class Enemy : MonoBehaviour
 	void Die ()
 	{
 		isDead = true;
-		reward = Random.Range(5,50);
 
-		PlayerStats.money += reward;
-        MoneyUI.needUpdate = true;
+		PlayerStats.moneyBar++;
+		FindObjectOfType<BarUI>().UpdateMoneyBar();
+		
+		if(PlayerStats.moneyBar == 5)
+		{
+			PlayerStats.money += 1;
+			MoneyUI.needUpdate = true;
+			PlayerStats.moneyBar = 0;
+		}
 
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		

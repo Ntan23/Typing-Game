@@ -394,6 +394,7 @@
 "Assets/Scripts/Typing/WordInput.cs"
 "Assets/Scripts/Typing/WordManager.cs"
 "Assets/Scripts/Typing/WordSpawner.cs"
+"Assets/Scripts/UI/BarUI.cs"
 "Assets/Scripts/UI/CheckClick.cs"
 "Assets/Scripts/UI/GameOver.cs"
 "Assets/Scripts/UI/Health.cs"

@@ -107,6 +107,7 @@
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\Manager\PlayerStats.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\Scripts\UI\BarUI.cs" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
