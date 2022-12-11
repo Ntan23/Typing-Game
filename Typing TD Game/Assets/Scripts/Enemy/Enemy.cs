@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
 	public GameObject healthImage;
 	public Image moneyBar;
 	private bool isDead = false;
+	GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+		gameManager = GameManager.instance;
         health = startHealth;
 		healthBar.color = Color.green;
     }
@@ -41,14 +43,7 @@ public class Enemy : MonoBehaviour
 		isDead = true;
 
 		PlayerStats.moneyBar++;
-		FindObjectOfType<BarUI>().UpdateMoneyBar();
-		
-		if(PlayerStats.moneyBar == 5)
-		{
-			PlayerStats.money += 1;
-			MoneyUI.needUpdate = true;
-			PlayerStats.moneyBar = 0;
-		}
+		gameManager.UpdateMoneyBar();
 
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		

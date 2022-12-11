@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int money;
+    public static float money;
     public static float moneyBar;
-    public int startMoney = 500;
+    public float startMoney = 500;
     public static float health;
     public float startingHealth = 100;
 

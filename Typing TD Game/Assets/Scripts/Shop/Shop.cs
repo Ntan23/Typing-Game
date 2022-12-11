@@ -8,9 +8,8 @@ public class Shop : MonoBehaviour
     public TurretBlueprint[] turrets;
     BuildManager buildManager;
     public static bool isClicked = true;
-    public static bool canUpdateColor;
     public Color selectedColor;
-    Image tempImage;
+    public Image tempImage;
     
     // Start is called before the first frame update
     void Start()
@@ -29,14 +28,12 @@ public class Shop : MonoBehaviour
     
         tempImage = buttonImg;
         
-        
         if(!turrets[0].isSelected)
         {
             buttonImg.color = selectedColor;
             Debug.Log("Standard Turret Selected");
             buildManager.SelectTurretToBuild(turrets[0]);
             turrets[0].isSelected = true;
-            canUpdateColor = true;
         }
         else if(turrets[0].isSelected)
         {
@@ -44,7 +41,6 @@ public class Shop : MonoBehaviour
             UnSelectTurret();
             Debug.Log("Deselect Standar Turret");
             turrets[0].isSelected = false;
-            canUpdateColor = false;
         }
     }
 
@@ -67,7 +63,6 @@ public class Shop : MonoBehaviour
             Debug.Log("AoE Turret Selected");
             buildManager.SelectTurretToBuild(turrets[1]);
             turrets[1].isSelected = true;
-            canUpdateColor = true;
         }
         else if(turrets[1].isSelected)
         {
@@ -76,7 +71,6 @@ public class Shop : MonoBehaviour
             Debug.Log("Deselect AoE Turret");
             UnSelectTurret();
             turrets[1].isSelected = false;
-            canUpdateColor = false;
         }
     }
 

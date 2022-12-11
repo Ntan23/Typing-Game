@@ -7,12 +7,12 @@ public class EnemyMovement : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Vector3 destinationPoint;
-    public float damage;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameManager.instance;
     }
 
     // Update is called once per frame
@@ -43,8 +43,7 @@ public class EnemyMovement : MonoBehaviour
 
     void EndPath()
     {
-        PlayerStats.health -= damage;
-        Health.canUpdate = true;
+        gameManager.UpdateHealthBar();
         Destroy(this.gameObject);
     }
 }

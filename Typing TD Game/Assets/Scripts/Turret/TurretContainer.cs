@@ -6,12 +6,12 @@ using UnityEngine.EventSystems;
 public class TurretContainer : MonoBehaviour
 {
     public Color hoverColor;
-    public Color notEnoughMoneyColor;
     private Color startColor;
     private Renderer objectRenderer;
     public Vector3 turretOffset;
-    [Header("Optional")]
-    public GameObject turret;
+    [HideInInspector] public GameObject turret;
+    [HideInInspector] public TurretBlueprint turretBlueprint;
+    [HideInInspector] public bool isUpgraded = false;
     BuildManager buildManager;
 
     // Start is called before the first frame update
@@ -38,13 +38,14 @@ public class TurretContainer : MonoBehaviour
         {
             return;
         }
-
+        
         if(turret != null)
         {
             hoverColor = Color.red;
         }
-        
-        
+
+        objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
+
         // if(buildManager.HasMoney)
         // {
         //     objectRenderer.material.color = hoverColor;
@@ -57,13 +58,9 @@ public class TurretContainer : MonoBehaviour
 
     void OnMouseOver()
     {
-        if(!Shop.canUpdateColor)
+        if(turret != null)
         {
-            return;
-        }
-        else if(Shop.canUpdateColor)
-        {
-            objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
+            objectRenderer.material.color = Color.red;
         }
     }
 
@@ -92,9 +89,52 @@ public class TurretContainer : MonoBehaviour
         }
 
         //Build A Turret
-        buildManager.BuildTurret(this);
+        BuildTurret(buildManager.GetTurretToBuild());
         // GameObject turretToBuild = buildManager.GetTurretToBuild();
 
         // turret = (GameObject) Instantiate(turretToBuild,transform.position + turretOffset,transform.rotation);
+    }
+
+    void BuildTurret(TurretBlueprint blueprint)
+    {
+        if(PlayerStats.money < blueprint.cost)
+        {
+            Debug.Log("Not Enough Money To Build That!");
+            return;
+        }
+
+        PlayerStats.money -= blueprint.cost;
+        MoneyUI.needUpdate = true;
+
+        GameObject _turret = (GameObject) Instantiate(blueprint.turret,GetBuildPosition(),Quaternion.identity);
+        turret = _turret;
+        // Debug.Log("Turret Build! Money left : "+PlayerStats.money);
+
+        turretBlueprint = blueprint;
+
+        GameObject effect = (GameObject) Instantiate(buildManager.buildEffect,GetBuildPosition(),Quaternion.identity);
+        Destroy(effect,1.0f);
+    }
+
+    public void UpgradeTurret()
+    {
+        if(PlayerStats.money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Not Enough Money To Upgrade That!");
+            return;
+        }
+
+        PlayerStats.money -= turretBlueprint.upgradeCost;
+        MoneyUI.needUpdate = true;
+        
+        Destroy(turret);
+
+        GameObject _turret = (GameObject) Instantiate(turretBlueprint.upgradedTurret,GetBuildPosition(),Quaternion.identity);
+        turret = _turret;
+        // Debug.Log("Turret Build! Money left : "+PlayerStats.money);
+    
+        GameObject effect = (GameObject) Instantiate(buildManager.buildEffect,GetBuildPosition(),Quaternion.identity);
+        Destroy(effect,1.0f);
+        isUpgraded = true;
     }
 }
