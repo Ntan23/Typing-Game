@@ -8,8 +8,9 @@ public class TurretUI : MonoBehaviour
 {
     public GameObject UI;
     public TextMeshProUGUI upgradeCost;
+    public TextMeshProUGUI sellAmount;
     public Button upgradeButton;
-    public GameObject upgradeButtonGO;
+    public GameObject moneyIcon;
     private TurretContainer target;
     [SerializeField] Shop shop;
 
@@ -31,14 +32,16 @@ public class TurretUI : MonoBehaviour
         {
             upgradeCost.text = target.turretBlueprint.upgradeCost.ToString();
             upgradeButton.interactable = true;
-            upgradeButtonGO.SetActive(true);
+            moneyIcon.SetActive(true);
         }
         else if(target.isUpgraded)
         {
             upgradeCost.text = "MAX";
             upgradeButton.interactable = false;
-            upgradeButtonGO.SetActive(false);
+            moneyIcon.SetActive(false);
         }
+
+        sellAmount.text = target.turretBlueprint.GetSellAmount().ToString();
 
         UI.SetActive(true);
     }
@@ -51,6 +54,12 @@ public class TurretUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+        BuildManager.instance.DeselectContainer();
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
         BuildManager.instance.DeselectContainer();
     }
 }

@@ -9,9 +9,14 @@ public class TurretBlueprint
     public string name;
     public GameObject turret;
     public GameObject upgradedTurret;
-    public int cost;
     public Sprite selectedUI;
     public Sprite unselectedUI;
+    public float buildCost;
     public float upgradeCost;
     public bool isSelected = false;
+
+    public float GetSellAmount()
+    {
+        return buildCost/2;
+    }
 }

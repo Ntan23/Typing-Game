@@ -60,7 +60,18 @@ public class TurretContainer : MonoBehaviour
     {
         if(turret != null)
         {
-            objectRenderer.material.color = Color.red;
+            if(turretBlueprint.isSelected)
+            {
+                objectRenderer.material.color = Color.red;
+            }
+            else if(!turretBlueprint.isSelected)
+            {
+                return;
+            } 
+        }
+        else if(turret == null)
+        {
+            return;
         }
     }
 
@@ -97,13 +108,13 @@ public class TurretContainer : MonoBehaviour
 
     void BuildTurret(TurretBlueprint blueprint)
     {
-        if(PlayerStats.money < blueprint.cost)
+        if(PlayerStats.money < blueprint.buildCost)
         {
             Debug.Log("Not Enough Money To Build That!");
             return;
         }
 
-        PlayerStats.money -= blueprint.cost;
+        PlayerStats.money -= blueprint.buildCost;
         MoneyUI.needUpdate = true;
 
         GameObject _turret = (GameObject) Instantiate(blueprint.turret,GetBuildPosition(),Quaternion.identity);
@@ -133,8 +144,21 @@ public class TurretContainer : MonoBehaviour
         turret = _turret;
         // Debug.Log("Turret Build! Money left : "+PlayerStats.money);
     
-        GameObject effect = (GameObject) Instantiate(buildManager.buildEffect,GetBuildPosition(),Quaternion.identity);
-        Destroy(effect,1.0f);
+        GameObject effect = (GameObject) Instantiate(buildManager.upgradeEffect,GetBuildPosition(),Quaternion.identity);
+        Destroy(effect,1.5f);
         isUpgraded = true;
+    }
+
+    public void SellTurret()
+    {
+        PlayerStats.money += turretBlueprint.GetSellAmount();
+        MoneyUI.needUpdate = true;
+
+        //Spawn A Sell Effect
+        GameObject effect = (GameObject) Instantiate(buildManager.sellEffect,GetBuildPosition(),Quaternion.identity);
+        Destroy(effect,1.5f);
+
+        Destroy(turret);
+        turretBlueprint = null;
     }
 }

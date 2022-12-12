@@ -9811,7 +9811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 10
-  damage: 5
+  damage: 10
   startSpeed: 5
   slowSpeed: 2
   impactFX: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}

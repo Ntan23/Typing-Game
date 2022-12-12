@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  speed: 60
+  speed: 50
   impactFX: {fileID: 2856554160429458852, guid: a1d11b6289805d14ba1220d1bc94b89e, type: 3}

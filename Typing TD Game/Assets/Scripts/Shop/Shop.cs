@@ -80,10 +80,6 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(null);
     }
 
-    void ChangeToOriginalColor()
-    {
-
-    }
     // Update is called once per frame
     void Update()
     {

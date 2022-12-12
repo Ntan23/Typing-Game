@@ -26,8 +26,9 @@ public class BuildManager : MonoBehaviour
     private TurretContainer selectedTurretContainer;
     public GameObject standardTurret;
     public GameObject buildEffect;
+    public GameObject sellEffect;
+    public GameObject upgradeEffect;
     public TurretUI turretUI;
-    public Image[] buttonImg;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +64,7 @@ public class BuildManager : MonoBehaviour
     {
         get 
         {
-            return turretToBuild.cost <= PlayerStats.money;
+            return turretToBuild.buildCost <= PlayerStats.money;
         }
     }
 
