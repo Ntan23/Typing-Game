@@ -14,8 +14,8 @@ public class Turret : MonoBehaviour
     public string enemyTag = "Enemy";
     public GameObject bullet;
     public Transform firePoint;
-    public Transform partToRotate;
-    private float turnSpeed = 5.0f;
+    // public Transform partToRotate;
+    // private float turnSpeed = 5.0f;
     private bool noTarget = true;
     
     // Start is called before the first frame update
@@ -65,8 +65,8 @@ public class Turret : MonoBehaviour
             //Target Lock On
             Vector3 direction = target.position - transform.position;
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,turnSpeed * Time.deltaTime).eulerAngles;
-            partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
+            // Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,turnSpeed * Time.deltaTime).eulerAngles;
+            // partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
         
             if(fireCountdown <= 0f)
             {
@@ -86,7 +86,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = (GameObject) Instantiate(bullet,firePoint.position,firePoint.rotation);
+        GameObject bulletGO = (GameObject) Instantiate(bullet,firePoint.position,Quaternion.identity);
 
         Bullet bulletScript = bulletGO.GetComponent<Bullet>();
 

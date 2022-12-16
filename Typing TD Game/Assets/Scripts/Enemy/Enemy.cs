@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
 	[Header("Unity Stuff")]
 	public Image healthBar;
 	public GameObject healthImage;
-	public Image moneyBar;
 	private bool isDead = false;
 	GameManager gameManager;
 
