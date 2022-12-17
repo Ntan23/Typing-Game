@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: 8728529316553158547}
   - component: {fileID: 1354320179613950286}
   - component: {fileID: 7044922642952511858}
-  - component: {fileID: 7592965219912722031}
   - component: {fileID: 2078522315354367628}
   m_Layer: 0
   m_Name: Fire
@@ -241,26 +240,6 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
---- !u!95 &7592965219912722031
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8043271177572012610}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ba8db401c56bb0448a8a72dd12ef74b8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2078522315354367628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 40
+  speed: 30
   impactFX: {fileID: 2856554160429458852, guid: 0099bc9086c1fc34f8335b2442f6a313, type: 3}
 --- !u!1 &9146342734256394157
 GameObject:

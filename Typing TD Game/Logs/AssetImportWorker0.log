@@ -15,7 +15,7 @@ D:/Github Repository/Typing TD Game/Typing TD Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49999
+50078
 Successfully changed project path to: D:/Github Repository/Typing TD Game/Typing TD Game
 D:/Github Repository/Typing TD Game/Typing TD Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/Github Repository/Typing TD Game/Typing TD Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 94.05 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 105.12 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,92 @@ Initialize mono
 Mono path[0] = 'C:/Unity/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006669 seconds.
+Registered in 0.006769 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 97.50 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 96.13 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.742 seconds
+- Completed reload, in  0.715 seconds
 Domain Reload Profiling:
-	ReloadAssembly (743ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (716ms)
+		BeginReloadAssembly (79ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (529ms)
-			LoadAssemblies (86ms)
+		EndReloadAssembly (515ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (120ms)
+			SetupTypeCache (121ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (325ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (307ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (69ms)
+				InitializePlatformSupportModulesInManaged (61ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
+				RefreshPlugins (96ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (111ms)
-				ProcessInitializeOnLoadMethodAttributes (47ms)
+				ProcessInitializeOnLoadAttributes (102ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004593 seconds.
+Registered in 0.004095 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 142.62 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 95.23 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.471 seconds
+- Completed reload, in  1.365 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1472ms)
-		BeginReloadAssembly (228ms)
+	ReloadAssembly (1366ms)
+		BeginReloadAssembly (225ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (125ms)
-		EndReloadAssembly (1108ms)
-			LoadAssemblies (90ms)
+			CreateAndSetChildDomain (126ms)
+		EndReloadAssembly (1011ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (321ms)
+			SetupTypeCache (291ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (69ms)
-			SetupLoadedEditorAssemblies (561ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (519ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (17ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (143ms)
-				BeforeProcessingInitializeOnLoad (104ms)
-				ProcessInitializeOnLoadAttributes (253ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				RefreshPlugins (95ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (269ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3541 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (0.6 MB). Loaded Objects now: 4004.
-Memory consumption went from 130.3 MB to 129.7 MB.
-Total: 3.404800 ms (FindLiveObjects: 0.444800 ms CreateObjectMapping: 0.139800 ms MarkObjects: 2.432100 ms  DeleteObjects: 0.387200 ms)
+Unloading 33 unused Assets / (0.6 MB). Loaded Objects now: 4005.
+Memory consumption went from 130.4 MB to 129.8 MB.
+Total: 5.515800 ms (FindLiveObjects: 0.374600 ms CreateObjectMapping: 0.612300 ms MarkObjects: 4.129300 ms  DeleteObjects: 0.398200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,53 +163,201 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 4393.030622 seconds.
-  path: Assets/Assets/UI/Unselected Water Tower.png
-  artifactKey: Guid(de50ed41ab68dbe4ca5ed5f4b68b6b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/UI/Unselected Water Tower.png using Guid(de50ed41ab68dbe4ca5ed5f4b68b6b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df9ac8e59931a197f2d0a3798a02dfee') in 1.025396 seconds 
+  Time since last request: 20174.458968 seconds.
+  path: Assets/Prefab/Fire/Fire 1.prefab
+  artifactKey: Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire 1.prefab using Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a9615b7b51895dabf1b9ea0583fc43') in 0.061819 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Assets/UI/Selected Water Tower.png
-  artifactKey: Guid(b3644d2d70863584091aedb505e73804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/UI/Selected Water Tower.png using Guid(b3644d2d70863584091aedb505e73804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b31d8e7977bf04e8432c4a6e9792352') in 0.401640 seconds 
+  Time since last request: 5.520907 seconds.
+  path: Assets/Prefab/Fire/Fire 1.prefab
+  artifactKey: Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire 1.prefab using Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a98939d75a1162d7a6578126819eb0') in 0.006563 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Assets/UI/White_1x1.png
-  artifactKey: Guid(d44fc8f830785a7498648f3136d5809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/UI/White_1x1.png using Guid(d44fc8f830785a7498648f3136d5809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fda57f831b413dc7b870f816833cdc6') in 0.014962 seconds 
+  Time since last request: 10.886377 seconds.
+  path: Assets/Prefab/Fire/Fires.prefab
+  artifactKey: Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fires.prefab using Guid(944f4a202a6c2e84f81721f034257164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb7b7f3cf85e8048e89f6e4e5053eb6') in 0.009014 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 68.245588 seconds.
-  path: Assets/Assets/Fire Tower/fire.mat
-  artifactKey: Guid(97868cd3419c04f4d93ac88fe1389906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Fire Tower/fire.mat using Guid(97868cd3419c04f4d93ac88fe1389906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c917f31fad5209d8e82a8e73355aafc2') in 0.082891 seconds 
+  Time since last request: 12.293064 seconds.
+  path: Assets/Prefab/Turrets/FireTower.prefab
+  artifactKey: Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Turrets/FireTower.prefab using Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a7d170780d751c4747fcd4e78a3d63') in 0.006296 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Assets/Fire Tower/FireTowerTimeline.playable
-  artifactKey: Guid(af85d40eedc263542901d72bfd9a0c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Fire Tower/FireTowerTimeline.playable using Guid(af85d40eedc263542901d72bfd9a0c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ae823a585bab067c54cc1815835b4b') in 0.014181 seconds 
+  Time since last request: 49.788924 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d96298ee170dfedf98b0cdcabbce6a') in 0.010018 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Assets/Fire Tower/tower_albedo.png
-  artifactKey: Guid(45e50bdd400810f478800edc6df8d472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Fire Tower/tower_albedo.png using Guid(45e50bdd400810f478800edc6df8d472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcfe221e37058a42b1e0b83e48307b5d') in 0.022024 seconds 
+  Time since last request: 11.820112 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e0f29240677819be9a482da056485ba') in 0.006714 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000089 seconds.
-  path: Assets/Assets/Fire Tower/tower.mat
-  artifactKey: Guid(f5908801048c3aa49903a6d4950d4203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Fire Tower/tower.mat using Guid(f5908801048c3aa49903a6d4950d4203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49b1a8a6f703df1758932553303981c') in 0.023680 seconds 
+  Time since last request: 1.851952 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7587ca781b7073ae08f5284d31f7b4') in 0.212344 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Assets/Fire Tower/house_albedo.png
-  artifactKey: Guid(77af6601f8c61734aa4ecd3a38418cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Fire Tower/house_albedo.png using Guid(77af6601f8c61734aa4ecd3a38418cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ce022124b46fac7b9a52a1f12587253') in 0.019209 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 1.815843 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f0961a2fe54db81f9eeb0c8a86124c') in 0.005961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.595444 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d750737f2f71eaa21e0e98b377b1777') in 0.006043 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004411 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.255 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1256ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (982ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (322ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (457ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (289ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.21 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3510 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (0.6 MB). Loaded Objects now: 4010.
+Memory consumption went from 127.7 MB to 127.1 MB.
+Total: 7.919100 ms (FindLiveObjects: 0.521000 ms CreateObjectMapping: 0.386600 ms MarkObjects: 6.522300 ms  DeleteObjects: 0.487800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 442.604993 seconds.
+  path: Assets/Prefab/Turrets/FireTower.prefab
+  artifactKey: Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Turrets/FireTower.prefab using Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd398faa20f196f28b9d2fca76030c81') in 0.042151 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005229 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Github Repository\Typing TD Game\Typing TD Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1295ms)
+		BeginReloadAssembly (183ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (981ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (330ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (426ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (240ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.12 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3510 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (0.5 MB). Loaded Objects now: 4013.
+Memory consumption went from 127.7 MB to 127.1 MB.
+Total: 3.822200 ms (FindLiveObjects: 0.497200 ms CreateObjectMapping: 0.154000 ms MarkObjects: 2.816300 ms  DeleteObjects: 0.353000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 182.347613 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ffdfc14a1aa35ce0ede0a668e23dc7d') in 0.047546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.252452 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f143725e1d29c042d79992acab8fe752') in 0.006215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.501765 seconds.
+  path: Assets/Prefab/Fire/Fire.prefab
+  artifactKey: Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Fire/Fire.prefab using Guid(82a7e50e5f555a344b25358e6875852f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '436675a5cbc347e13d07129c3bfafe62') in 0.006899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 67.952777 seconds.
+  path: Assets/Prefab/Turrets/FireTower.prefab
+  artifactKey: Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Turrets/FireTower.prefab using Guid(108617542e3a1764b9a02cca663b4509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '079f2d2833e5cfe28ea966d9382105d5') in 0.007451 seconds 

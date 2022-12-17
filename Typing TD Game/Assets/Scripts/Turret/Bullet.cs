@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     [SerializeField] private float damage;
-    public float speed = 70f;
+    public float speed;
     public GameObject impactFX;
     
     public void Search(Transform _target)
@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
-        if(dir.magnitude <= distanceThisFrame)
+        if(dir.magnitude < distanceThisFrame)
         {
             HitTarget();
             return;
@@ -46,7 +46,8 @@ public class Bullet : MonoBehaviour
         GameObject effects = (GameObject) Instantiate(impactFX,transform.position,transform.rotation);
         
         Destroy(effects,2.0f);
-        // Destroy(target.gameObject);
+
+        //Damage The Target
         Damage(target);
         Destroy(gameObject);
     }
