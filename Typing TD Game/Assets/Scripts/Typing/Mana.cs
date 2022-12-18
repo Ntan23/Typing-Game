@@ -5,24 +5,42 @@ using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
-    private int ManaCount = 0;
-    public Text Manatext;
+    public static float ManaCount = 0f;
+
+    public static float MaxMana = 100f;
+    // public Text Manatext;
+
+    public Image ManaImg;
 
     // Start is called before the first frame update
     void Start()
     {
-        Manatext = GetComponent<Text>();
+        ManaImg = GetComponent<Image>();
+        // Manatext = GetComponent<Text>();
     }
 
-    public void IncreaseMana()
+    public static void IncreaseMana()
     {
-        ManaCount++;
-        Manatext.text = "Mana : "+ManaCount.ToString();
+        ManaCount+=10f;
+        // Manatext.text = "Mana : "+ManaCount.ToString();
+        // Debug.Log(ManaCount);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // if(ManaCount <= MaxMana)
+        // {
+        //     ManaImg.fillAmount = ManaCount;
+        // }
+
+        // Debug.Log(ManaCount);
+        ManaImg.fillAmount = (ManaCount / MaxMana);
+
+
+        // if(ManaCount == MaxMana)
+        // {
+        //     ManaImg.fillAmount = 1;
+        // }
     }
 }

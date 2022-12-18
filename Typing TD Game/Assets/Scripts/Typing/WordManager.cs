@@ -30,11 +30,10 @@ public class WordManager : MonoBehaviour
     #endregion
     
 
-    #region Mana
-    [Header("Mana Section")]
-    public Mana mana;
+    // #region Mana
+    // [Header("Mana Section")]
 
-    #endregion
+    // #endregion
 
     [SerializeField]
     // private Animator anim;
@@ -115,7 +114,11 @@ public class WordManager : MonoBehaviour
 
         if(hasActiveWord && activeWord.WordTyped())
         {
-            mana.IncreaseMana();
+            if(Mana.ManaCount < Mana.MaxMana)
+            {
+            Mana.IncreaseMana();
+            }
+           
             hasActiveWord = false;
             words.Remove(activeWord);
 
