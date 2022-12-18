@@ -99,7 +99,8 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings: []
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 82b5262674a161b4db91a4e4c63e2288: {fileID: 8524207350788194539}
 --- !u!95 &8833076263204439269
 Animator:
   serializedVersion: 4
@@ -136,7 +137,7 @@ MonoBehaviour:
   fireRate: 1
   target: {fileID: 0}
   enemyTag: Enemy
-  bullet: {fileID: 8043271177572012610, guid: 82a7e50e5f555a344b25358e6875852f, type: 3}
+  bullet: {fileID: 5527690360869254568, guid: 07e7b13bc0944c94984803ced497205e, type: 3}
   firePoint: {fileID: 8858726098239612434}
 --- !u!1 &926908876547360160
 GameObject:

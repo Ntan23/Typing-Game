@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if(target == null)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,2.0f);
             return;
         }
 
