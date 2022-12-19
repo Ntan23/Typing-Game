@@ -42,10 +42,13 @@ public class WordManager : MonoBehaviour
 
    private Translation translation;
 
+   GameManager gm;
+
 
     // Start is called before the first frame update
     private void Start()
     {
+        gm = GameManager.instance;
         // if(kamus.ContainsKey("ayam"))
         // {
         //     Debug.Log(kamus["anjing"]);
@@ -114,9 +117,9 @@ public class WordManager : MonoBehaviour
 
         if(hasActiveWord && activeWord.WordTyped())
         {
-            if(Mana.ManaCount < Mana.MaxMana)
+            if(gm.ManaCount < gm.MaxMana)
             {
-            Mana.IncreaseMana();
+                gm.IncreaseMana();
             }
            
             hasActiveWord = false;

@@ -10,6 +10,12 @@ public class WaveSpawner : MonoBehaviour
     public float countdown = 2.0f;
     private int waveIndex = 0;
     public float delayTime;
+    GameManager gm;
+    
+    void Start()
+    {
+        gm = GameManager.instance;
+    }
 
     private void Update()
     {
@@ -17,6 +23,10 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            PlayerStats.money += gm.ManaCount*0.1f;
+            MoneyUI.needUpdate = true;
+            gm.ManaCount = 0;
+            gm.UpdateManaBar();
         }
 
         countdown -= Time.deltaTime;

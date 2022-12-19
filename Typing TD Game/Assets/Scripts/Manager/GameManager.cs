@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    bool gameEnded;
+    public bool gameEnded;
     float startingHealth;
     [SerializeField] private float EnemyHitDamage;
     public GameObject gameOverUI;
     [SerializeField] private Image moneyBarImg;
     [SerializeField] private Image healthBar;
+    public float ManaCount = 0f;
+    public float MaxMana = 100f;
+    public Image ManaImg;
 
     // Start is called before the first frame update
     void Start()
@@ -108,5 +111,26 @@ public class GameManager : MonoBehaviour
         {
             healthBar.color = Color.red;
         }
+    }
+
+    public void IncreaseMana()
+    {
+        if(ManaCount <= 100)
+        {
+            ManaCount += 15;
+        }
+        
+        UpdateManaBar();
+    }
+
+    public void DecreaseMana()
+    {
+        ManaCount--;
+        UpdateManaBar();
+    }
+
+    public void UpdateManaBar()
+    {
+        ManaImg.fillAmount = ManaCount/MaxMana;
     }
 }

@@ -40,7 +40,7 @@ public class Word
           bool wordTyped = (AlphaIdx >= word.Length);
           if(wordTyped)
           {
-          // Remove word on screen
+               // Remove word on screen
                wordDisplay.RemoveWord();
           }
           return wordTyped;

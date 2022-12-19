@@ -11,11 +11,13 @@ public class AoETurret : MonoBehaviour
     [SerializeField] private float slowSpeed;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
+    GameManager gm;
     // private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameManager.instance;
         InvokeRepeating("CheckForEnemy",1.0f,1.0f);
     }
 
@@ -50,8 +52,9 @@ public class AoETurret : MonoBehaviour
 
         foreach(Collider c in colliders)
         {
-            if(c.CompareTag("Enemy"))
+            if(c.CompareTag("Enemy") && gm.ManaCount > 0)
             {
+                gm.DecreaseMana();
                 // enemyCount++;
                 // Debug.Log("Enemy Count : "+enemyCount);
                 StartCoroutine(CastEffect(0.9f));

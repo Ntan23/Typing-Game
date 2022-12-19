@@ -13,11 +13,13 @@ public class TurretContainer : MonoBehaviour
     [HideInInspector] public TurretBlueprint turretBlueprint;
     [HideInInspector] public bool isUpgraded = false;
     BuildManager buildManager;
+    GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
         buildManager = BuildManager.instance;
+        gm = GameManager.instance;
         objectRenderer = GetComponent<Renderer>();
         startColor = objectRenderer.material.color;
     }
@@ -58,7 +60,7 @@ public class TurretContainer : MonoBehaviour
 
     void OnMouseOver()
     {
-        if(turret != null)
+        if(turret != null && !gm.gameEnded)
         {
             if(turretBlueprint.isSelected)
             {
@@ -69,7 +71,7 @@ public class TurretContainer : MonoBehaviour
                 return;
             } 
         }
-        else if(turret == null)
+        else if(turret == null && !gm.gameEnded)
         {
             return;
         }
