@@ -12,23 +12,20 @@ public class Translation : MonoBehaviour
     [SerializeField]
     private GameObject translateContainer;
     // private GameObject goTranslation;
-
-    [SerializeField]
     private Animator anim;
-
-    public bool isshow;
+    public bool isShow;
 
     // Start is called before the first frame update
     void Start()
     {
         // goTranslation = FindObjectOfType<GameObject>();
         text.text = "";
-        anim=GameObject.FindGameObjectWithTag("transcontainer").GetComponent<Animator>();
+        anim = GameObject.FindGameObjectWithTag("transcontainer").GetComponent<Animator>();
     }
 
     public void showTranslation(string word)
     {
-        isshow = true;
+        isShow = true;
         // Debug Purpose isshow
         // Debug.Log(isshow);
         text.text = word;
@@ -37,14 +34,13 @@ public class Translation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isshow)
+        if(isShow)
         {
             translateContainer.SetActive(true);
         }
-        else if(!isshow)
+        else if(!isShow)
         {
             translateContainer.SetActive(false);
         } 
     }
-
 }

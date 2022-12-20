@@ -11,8 +11,7 @@ public class WordInput : MonoBehaviour
     {
        foreach(char alphabet in Input.inputString)
        {
-            wordManager.TypingLetter(alphabet);
-            //Debug.Log(alphabet);
+            wordManager.TypingLetter(char.ToLower(alphabet));
        }
     }
 }

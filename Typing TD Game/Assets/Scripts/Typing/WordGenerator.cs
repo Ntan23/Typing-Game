@@ -45,6 +45,4 @@ public class WordGenerator : MonoBehaviour
         wordList = textAssetwordList.text.Split(new string[] {"," ,"\n"}, System.StringSplitOptions.None);
         indoList = textAssetindoList.text.Split(new string[] {"," ,"\n"}, System.StringSplitOptions.None);
     }
-
-   
 }

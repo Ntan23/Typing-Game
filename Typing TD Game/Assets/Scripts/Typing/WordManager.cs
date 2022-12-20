@@ -14,7 +14,7 @@ public class WordManager : MonoBehaviour
 
     }; */
     #region Word
-   [Header("Word Section")]
+    [Header("Word Section")]
     public List<Word> words;
 
     public WordSpawner wordSpawner;
@@ -37,10 +37,8 @@ public class WordManager : MonoBehaviour
 
     [SerializeField]
     // private Animator anim;
-
-   private CooldownTimer cooldownTimer;
-
-   private Translation translation;
+    private CooldownTimer cooldownTimer;
+    private Translation translation;
 
    GameManager gm;
 
@@ -57,7 +55,6 @@ public class WordManager : MonoBehaviour
         AddWordToList();
         // AddWordToList();
         translation = FindObjectOfType<Translation>();
-        
     }
 
 
@@ -80,7 +77,7 @@ public class WordManager : MonoBehaviour
         if(hasActiveWord)
         {
             // Check if alphabet was next
-            if(activeWord.GetNextAlphabet() == alphabet)
+            if(activeWord.GetNextAlphabet() == alphabet || activeWord.GetNextAlphabet() == alphabet)
             {
                 activeWord.TypeAlphabet();
             }
@@ -142,7 +139,7 @@ public class WordManager : MonoBehaviour
         yield return new WaitForSeconds(Time+0.5f);
         //Debug purpose Time
         //Debug.Log(Time);
-        translation.isshow = false;
+        translation.isShow = false;
         AddWordToList();
     }
 
