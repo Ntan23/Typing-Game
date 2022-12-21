@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d4d8e94980fe34bb8b499406f42dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  speed: 30
+  damage: 20
+  speed: 20
   impactFX: {fileID: 2781281654350731640, guid: 16e2b9a8fc939f7418ccff8ecf9acbfc, type: 3}
 --- !u!1 &8589738420058234350
 GameObject:
