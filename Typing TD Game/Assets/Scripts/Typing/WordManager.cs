@@ -39,6 +39,7 @@ public class WordManager : MonoBehaviour
     // private Animator anim;
     private CooldownTimer cooldownTimer;
     private Translation translation;
+    public static int manaCount = 10;
 
    GameManager gm;
 
@@ -116,7 +117,7 @@ public class WordManager : MonoBehaviour
         {
             if(gm.ManaCount < gm.MaxMana)
             {
-                gm.IncreaseMana();
+                gm.IncreaseMana(manaCount);
             }
            
             hasActiveWord = false;

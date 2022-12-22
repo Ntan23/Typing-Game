@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour
     public float range = 15f;
     public float fireRate = 1.0f;
     private float fireCountdown = 0.0f;
+    public int manaCost;
 
     [Header("Enemy & Turret Stuff")]
     public Transform target;
@@ -70,7 +71,7 @@ public class Turret : MonoBehaviour
             // Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,turnSpeed * Time.deltaTime).eulerAngles;
             // partToRotate.rotation = Quaternion.Euler(0f,rotation.y,0f);
         
-            if(fireCountdown <= 0f && gm.ManaCount > 0)
+            if(fireCountdown <= 0f && gm.ManaCount >= manaCost)
             {
                 Shoot();
                 fireCountdown = 1.0f/fireRate;
@@ -88,7 +89,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        gm.DecreaseMana();
+        gm.DecreaseMana(manaCost);
         
         GameObject bulletGO = (GameObject) Instantiate(bullet,firePoint.position,Quaternion.identity);
 

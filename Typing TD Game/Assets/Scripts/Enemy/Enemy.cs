@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-	private float startHealth = 100;
+	public float startHealth = 100;
 	private float health;
 	private int reward;
 	public GameObject deathEffect;
@@ -14,11 +15,13 @@ public class Enemy : MonoBehaviour
 	public Image healthBar;
 	public GameObject healthImage;
 	private bool isDead = false;
+	NavMeshAgent navMeshAgent;
 	GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+		navMeshAgent = GetComponent<NavMeshAgent>();
 		gameManager = GameManager.instance;
         health = startHealth;
 		healthBar.color = Color.green;
@@ -47,6 +50,8 @@ public class Enemy : MonoBehaviour
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		
         Destroy(effect,3f);
+		
+		WaveSpawner.enemiesAlive--;
 
 		Destroy(gameObject);
 	}
@@ -74,4 +79,10 @@ public class Enemy : MonoBehaviour
     {
         healthImage.transform.rotation = Quaternion.Euler(40,0,0);
     }
+
+	public void Slow(float slowSpeed)
+	{
+		navMeshAgent.speed = slowSpeed;
+		navMeshAgent.acceleration = slowSpeed;
+	}
 }

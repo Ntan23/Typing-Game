@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   fireRate: 1
+  manaCost: 1
   target: {fileID: 0}
   enemyTag: Enemy
   bullet: {fileID: 5527690360869254568, guid: 07e7b13bc0944c94984803ced497205e, type: 3}

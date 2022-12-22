@@ -375,6 +375,7 @@
 "Assets/Scripts/Camera/CameraController.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyMovement.cs"
+"Assets/Scripts/Enemy/Wave.cs"
 "Assets/Scripts/Enemy/WaveSpawner.cs"
 "Assets/Scripts/Manager/BuildManager.cs"
 "Assets/Scripts/Manager/GameManager.cs"

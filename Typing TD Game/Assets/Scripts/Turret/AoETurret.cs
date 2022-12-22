@@ -7,17 +7,21 @@ public class AoETurret : MonoBehaviour
 {
     [SerializeField] private float attackRadius;
     [SerializeField] private float damage;
+    [SerializeField] private int manaCost;
     [SerializeField] private float startSpeed;
     [SerializeField] private float slowSpeed;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
+    public static bool getSlowed = false;
     GameManager gm;
+    WaveSpawner waveSpawner;
     // private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.instance;
+        waveSpawner = FindObjectOfType<WaveSpawner>();
         InvokeRepeating("CheckForEnemy",1.0f,1.0f);
     }
 
@@ -30,35 +34,38 @@ public class AoETurret : MonoBehaviour
     void CheckForEnemy()
     {
         // enemyCount = 0;
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        foreach (GameObject enemy in enemies)
-        {
-            if(enemy == null)
-            {
-                return;
-            }
+        // foreach (GameObject enemy in enemies)
+        // {
+        //     if(enemy == null)
+        //     {
+        //         return;
+        //     }
 
-            float enemyDistance = Vector3.Distance(transform.position,enemy.transform.position);
+        //     float enemyDistance = Vector3.Distance(transform.position,enemy.transform.position);
             
-            if(enemyDistance >= attackRadius)
-            {
-                enemy.GetComponent<NavMeshAgent>().speed = startSpeed;
-                enemy.GetComponent<NavMeshAgent>().acceleration = startSpeed;
-            }
-        }
+        //     if(enemyDistance >= attackRadius)
+        //     {
+        //         enemy.GetComponent<NavMeshAgent>().speed = startSpeed;
+        //         enemy.GetComponent<NavMeshAgent>().acceleration = startSpeed;
+        //     }
+        // }
 
         Collider[] colliders = Physics.OverlapSphere(transform.position,attackRadius);
 
         foreach(Collider c in colliders)
         {
-            if(c.CompareTag("Enemy") && gm.ManaCount > 0)
+            if(c.CompareTag("Enemy"))
             {
-                gm.DecreaseMana();
                 // enemyCount++;
                 // Debug.Log("Enemy Count : "+enemyCount);
-                StartCoroutine(CastEffect(0.9f));
-                HitTarget(c.transform);
+                if(gm.ManaCount >= manaCost)
+                {
+                    StartCoroutine(CastEffect(0.9f));
+                    gm.DecreaseMana(manaCost);
+                    HitTarget(c.transform);
+                }
             }
         }
     }
@@ -68,10 +75,7 @@ public class AoETurret : MonoBehaviour
         GameObject effects = (GameObject) Instantiate(impactFX,target.transform.position,Quaternion.Euler(90,0,0));
 
         Destroy(effects,2.0f);
-
-        //Slow The Enemy And Damage The Enemy
-        target.GetComponent<NavMeshAgent>().speed = slowSpeed;
-        target.GetComponent<NavMeshAgent>().acceleration = slowSpeed;
+        
         Damage(target);
     }
 
@@ -80,7 +84,8 @@ public class AoETurret : MonoBehaviour
         Enemy e = enemy.GetComponent<Enemy>();
 
         if(e != null)
-        {
+        {   
+            e.Slow(slowSpeed);
             e.TakeDamage(damage);
         }
     }

@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         moneyBarImg.fillAmount = 0;
     }
 
-    public void UpdateHealthBar()
+    public void HitDamage()
     {
         PlayerStats.health -= EnemyHitDamage;
 
@@ -113,20 +113,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void IncreaseMana()
+    public void IncreaseMana(int manaCount)
     {
         if(ManaCount <= 100)
         {
-            ManaCount += 15;
+            ManaCount += manaCount;
         }
         
         UpdateManaBar();
     }
 
-    public void DecreaseMana()
+    public void DecreaseMana(int manaCost)
     {
-        ManaCount--;
+        ManaCount-=manaCost;
         UpdateManaBar();
+        // Debug.Log(ManaCount);
     }
 
     public void UpdateManaBar()

@@ -131,11 +131,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   fireRate: 1
+  manaCost: 2
   target: {fileID: 0}
   enemyTag: Enemy
   bullet: {fileID: 2152086122378604710, guid: 8c7509c4c98f0424b9e4fc5ac653cc27, type: 3}
   firePoint: {fileID: 7470163328917358425}
-  partToRotate: {fileID: 7470163329205545854}
 --- !u!1 &7470163328917358424
 GameObject:
   m_ObjectHideFlags: 0
