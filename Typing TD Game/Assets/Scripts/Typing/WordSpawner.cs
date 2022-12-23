@@ -8,6 +8,7 @@ public class WordSpawner : MonoBehaviour
 
     // For reference only could be change
     public Transform wordCanvas;
+    
     public WordDisplay SpawnTheWord()
     {
         // create obj

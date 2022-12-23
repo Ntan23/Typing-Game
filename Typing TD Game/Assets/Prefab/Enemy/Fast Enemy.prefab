@@ -405,7 +405,7 @@ NavMeshAgent:
   m_Speed: 10
   m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 60
+  startSpeed: 0
   deathEffect: {fileID: 6473187707338313222, guid: d240e291942d0aa4bae1e2f420d52c26, type: 3}
   healthBar: {fileID: 2132288766}
   healthImage: {fileID: 380600383}

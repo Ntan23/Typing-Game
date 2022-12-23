@@ -9815,6 +9815,7 @@ MonoBehaviour:
   manaCost: 2
   startSpeed: 5
   slowSpeed: 1
+  slowDuration: 5
   impactFX: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
   AoEFX: {fileID: 7821859172750566570}
 --- !u!1 &7726758275300325053

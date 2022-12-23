@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
 	public float startHealth = 100;
+	public float startSpeed;
 	private float health;
 	private int reward;
 	public GameObject deathEffect;
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
 	public GameObject healthImage;
 	private bool isDead = false;
 	NavMeshAgent navMeshAgent;
+	AoETurret aoETurret;
 	GameManager gameManager;
 
     // Start is called before the first frame update
@@ -23,8 +25,15 @@ public class Enemy : MonoBehaviour
     {
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		gameManager = GameManager.instance;
+		aoETurret = FindObjectOfType<AoETurret>();
         health = startHealth;
+		startSpeed = navMeshAgent.speed;
 		healthBar.color = Color.green;
+		
+		if(aoETurret != null)
+		{
+			InvokeRepeating("UnSlow",0.0f,aoETurret.slowDuration);
+		}
     }
 
 	public void TakeDamage (float damage)
@@ -84,5 +93,18 @@ public class Enemy : MonoBehaviour
 	{
 		navMeshAgent.speed = slowSpeed;
 		navMeshAgent.acceleration = slowSpeed;
+	}
+
+	public void UnSlow()
+	{
+		if(navMeshAgent.speed != startSpeed || navMeshAgent.acceleration != startSpeed)
+		{
+			navMeshAgent.speed = startSpeed;
+			navMeshAgent.acceleration = startSpeed;
+		}
+		else 
+		{
+			return;
+		}
 	}
 }

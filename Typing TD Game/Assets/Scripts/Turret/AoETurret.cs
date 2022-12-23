@@ -10,19 +10,18 @@ public class AoETurret : MonoBehaviour
     [SerializeField] private int manaCost;
     [SerializeField] private float startSpeed;
     [SerializeField] private float slowSpeed;
+    public float slowDuration;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
-    public static bool getSlowed = false;
     GameManager gm;
-    WaveSpawner waveSpawner;
+
     // private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.instance;
-        waveSpawner = FindObjectOfType<WaveSpawner>();
-        InvokeRepeating("CheckForEnemy",1.0f,1.0f);
+        InvokeRepeating("CheckForEnemy",0.0f,1.0f);
     }
 
     // Update is called once per frame
@@ -47,8 +46,7 @@ public class AoETurret : MonoBehaviour
             
         //     if(enemyDistance >= attackRadius)
         //     {
-        //         enemy.GetComponent<NavMeshAgent>().speed = startSpeed;
-        //         enemy.GetComponent<NavMeshAgent>().acceleration = startSpeed;
+        //         enemy.GetComponent<Enemy>().UnSlow();
         //     }
         // }
 
@@ -85,8 +83,8 @@ public class AoETurret : MonoBehaviour
 
         if(e != null)
         {   
-            e.Slow(slowSpeed);
             e.TakeDamage(damage);
+            e.Slow(slowSpeed);
         }
     }
 

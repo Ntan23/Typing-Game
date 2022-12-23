@@ -21,8 +21,7 @@ public class WordManager : MonoBehaviour
 
     public WordDisplay wordDisplay;
 
-    [SerializeField]
-    private bool hasActiveWord;
+    public static bool hasActiveWord = false;
 
     [SerializeField]
     private Word activeWord;
@@ -61,16 +60,16 @@ public class WordManager : MonoBehaviour
 
     public void AddWordToList()
     {
-       wordDisplay = wordSpawner.SpawnTheWord();
+        wordDisplay = wordSpawner.SpawnTheWord();
 
-       Word word = new Word(WordGenerator.GetRandomWord(), wordDisplay);
+        Word word = new Word(WordGenerator.GetRandomWord(), wordDisplay);
 
-       //Debug Purpose show random word
-       //Debug.Log(word.word);
+        //Debug Purpose show random word
+        //Debug.Log(word.word);
        
-       words.Add(word);
-       // play animation
-    //    anim.Play("TextFadein");
+        words.Add(word);
+        // play animation
+        //anim.Play("TextFadein");
     }
     
     public void TypingLetter(char alphabet)
@@ -130,7 +129,7 @@ public class WordManager : MonoBehaviour
             translation.showTranslation(WordGenerator.indoWord);
             cooldownTimer.gameObject.SetActive(true);
             StartCoroutine(WordDelay(1.5f));
-            // cooldownTimer.Begin(3);\
+            // cooldownTimer.Begin(3);
         }
     }
 
@@ -144,7 +143,6 @@ public class WordManager : MonoBehaviour
         AddWordToList();
     }
 
-  
     // Update is called once per frame
     void Update()
     {

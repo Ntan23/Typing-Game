@@ -38,6 +38,7 @@ public class Word
      public bool WordTyped()
      {
           bool wordTyped = (AlphaIdx >= word.Length);
+          
           if(wordTyped)
           {
                // Remove word on screen
