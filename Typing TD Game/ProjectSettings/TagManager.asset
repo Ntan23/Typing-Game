@@ -11,6 +11,7 @@ TagManager:
   - MoneyBar
   - transcontainer
   - WordDisplay
+  - Indicator
   layers:
   - Default
   - TransparentFX

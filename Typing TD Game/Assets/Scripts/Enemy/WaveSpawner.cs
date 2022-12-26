@@ -11,9 +11,11 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPoint;
     public float timeBetweenWaves = 5.0f;
     public float countdown = 2.0f;
-    private int waveIndex = 0;
+    public static int waveIndex = 0;
     public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveIndexText;
+    public bool nextwave = false;
+    
     GameManager gm;
     
     void Start()
@@ -28,11 +30,18 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if(countdown <= 0)
-        {   
+        if(enemiesAlive == 0 && nextwave == false)
+        {
             ConvertManaToMoney();
+            nextwave= true;
+        }
+
+        if(countdown <= 0 && nextwave)
+        {   
+            // ConvertManaToMoney();
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            nextwave = false;
             return;
         }
 
@@ -51,9 +60,9 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy(wave.enemy);
             yield return new WaitForSeconds(1.0f/wave.rate);
         }
-        
-        waveIndex++;
 
+        waveIndex++;
+       
         waveIndexText.text = "Wave " + waveIndex.ToString() + "/" + waves.Length.ToString();
 
         if(waveIndex == waves.Length)

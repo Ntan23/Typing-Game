@@ -9,10 +9,13 @@ public class EnemyMovement : MonoBehaviour
     public Vector3 destinationPoint;
     GameManager gameManager;
 
+    public ShakeDamage shakeDamage;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.instance;
+        shakeDamage = FindObjectOfType<ShakeDamage>();
     }
 
     // Update is called once per frame
@@ -45,6 +48,7 @@ public class EnemyMovement : MonoBehaviour
     {
         gameManager.HitDamage();
         WaveSpawner.enemiesAlive--;
+        shakeDamage.isDmged = true;
         Destroy(this.gameObject);
     }
 }
