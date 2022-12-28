@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
         healthBar.color = Color.green;
         gameOverUI.SetActive(false);
         VictoryUI.SetActive(false);
-        waveSpawner = FindObjectOfType<WaveSpawner>();
     }
 
     // Update is called once per frame
@@ -54,16 +53,16 @@ public class GameManager : MonoBehaviour
 
         if(PlayerStats.health <= 0)
         {
-            StartCoroutine(EndGame());
+            StartCoroutine(Defeat());
         }
 
-        if(WaveSpawner.waveIndex == waveSpawner.waves.Length &&WaveSpawner.enemiesAlive == 0)
+        if(WaveSpawner.waveIndex == waveSpawner.waves.Length && WaveSpawner.enemiesAlive == 0 && PlayerStats.health > 0)
         {
-            StartCoroutine(EndGame2());
+            StartCoroutine(Victory());
         }
     }
 
-    IEnumerator EndGame()
+    IEnumerator Defeat()
     {
         gameEnded = true;
         gameOverUI.SetActive(true);
@@ -71,13 +70,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-      IEnumerator EndGame2()
+    IEnumerator Victory()
     {
         gameEnded = true;
         VictoryUI.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         Time.timeScale = 0;
     }
+
      public void UpdateMoneyBar()
 	{
 		moneyBarImg.fillAmount = PlayerStats.moneyBar/5;

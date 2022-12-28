@@ -32,18 +32,21 @@ public class ShakeDamage : MonoBehaviour
             return;
         }
 
-        if(isDmged){
+        if(isDmged)
+        {
             StartCoroutine(Shake());
             getDmged();
             isDmged = false;
         }
     }
 
-    IEnumerator Shake(){
+    IEnumerator Shake()
+    {
         Vector3 startpos = transform.localPosition;
         float currenttime = 0f;
 
-        while(currenttime < duration){
+        while(currenttime < duration)
+        {
             startpos = transform.localPosition;
             currenttime +=Time.deltaTime;
             float strength = curve.Evaluate(currenttime / duration);
