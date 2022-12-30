@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public float panSpeed = 30.0f;
     public float panBorderThickness =10.0f;
-    private bool canMove = true;
+    public bool canMove = true;
     public float scrollSpeed = 5.0f;
     public float minX;
     public float maxX;
@@ -14,21 +14,34 @@ public class CameraController : MonoBehaviour
     public float maxY;  
     public float minZ;
     public float maxZ;
+
+    private ToggleUI toggleUI;
     // Start is called before the first frame update
     void Start()
     {
-        
+        toggleUI = FindObjectOfType<ToggleUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             canMove = !canMove;
         }
 
-        if(canMove == false)
+        if(canMove && !GameManager.instance.gameEnded)
+        {
+            toggleUI.Toggle_OFF();
+        }
+
+        if(!canMove && !GameManager.instance.gameEnded)
+        {
+            toggleUI.Toggle_ON();
+            return;
+        }
+
+        if(GameManager.instance.gameEnded)
         {
             return;
         }
@@ -59,4 +72,5 @@ public class CameraController : MonoBehaviour
         position.z = Mathf.Clamp(position.z,minZ,maxZ);
         transform.position = position;
     }
+
 }

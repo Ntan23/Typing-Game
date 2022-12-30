@@ -86,6 +86,8 @@ public class BuildManager : MonoBehaviour
     {
         selectedTurretContainer = null;
         turretUI.HideUI();
+        turretUI.Range.SetActive(true);
+        turretUI.Range2.SetActive(true);
     }
 
     public void SelectTurretToBuild(TurretBlueprint turret)

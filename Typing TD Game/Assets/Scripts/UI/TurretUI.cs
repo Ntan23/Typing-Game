@@ -11,14 +11,34 @@ public class TurretUI : MonoBehaviour
     public TextMeshProUGUI sellAmount;
     public Button upgradeButton;
     public GameObject moneyIcon;
+
+    public GameObject Range;
+    public GameObject Range2;
     private TurretContainer target;
     [SerializeField] Shop shop;
+
+    private void Start() {
+    }
 
     public void SetTarget(TurretContainer _target)
     {
         target = _target;
-
+        if(target.turret.CompareTag("Fire")){
         transform.position = target.GetBuildPosition();
+
+     
+        Range2.SetActive(false);
+        }
+
+        if(target.turret.CompareTag("AoE")){
+        transform.position = target.GetBuildPosition();
+
+        Range.SetActive(false);
+
+        }
+
+      
+
 
         if(target.turretBlueprint.isSelected)
         {
@@ -44,6 +64,8 @@ public class TurretUI : MonoBehaviour
         sellAmount.text = target.turretBlueprint.GetSellAmount().ToString();
 
         UI.SetActive(true);
+
+        
     }
 
     public void HideUI()
