@@ -17,28 +17,11 @@ public class TurretUI : MonoBehaviour
     private TurretContainer target;
     [SerializeField] Shop shop;
 
-    private void Start() {
-    }
-
     public void SetTarget(TurretContainer _target)
     {
         target = _target;
-        if(target.turret.CompareTag("Fire")){
+
         transform.position = target.GetBuildPosition();
-
-     
-        Range2.SetActive(false);
-        }
-
-        if(target.turret.CompareTag("AoE")){
-        transform.position = target.GetBuildPosition();
-
-        Range.SetActive(false);
-
-        }
-
-      
-
 
         if(target.turretBlueprint.isSelected)
         {
@@ -46,6 +29,17 @@ public class TurretUI : MonoBehaviour
             shop.tempImage.color = Color.white;
             shop.tempImage.sprite = target.turretBlueprint.unselectedUI;
             shop.UnSelectTurret();
+        }
+
+        if(target.turret.CompareTag("Fire"))
+        {
+            Range.SetActive(true);
+            Range2.SetActive(false);
+        }
+        else if(target.turret.CompareTag("AoE"))
+        {
+            Range.SetActive(false);
+            Range2.SetActive(true);
         }
 
         if(!target.isUpgraded)
@@ -64,13 +58,13 @@ public class TurretUI : MonoBehaviour
         sellAmount.text = target.turretBlueprint.GetSellAmount().ToString();
 
         UI.SetActive(true);
-
-        
     }
 
     public void HideUI()
     {
         UI.SetActive(false);
+        Range.SetActive(false);
+        Range2.SetActive(false);
     }
 
     public void Upgrade()

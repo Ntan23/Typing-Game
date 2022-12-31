@@ -830,14 +830,14 @@ MonoBehaviour:
   turrets:
   - name: Standard Turret
     turret: {fileID: 799638447413801959, guid: 108617542e3a1764b9a02cca663b4509, type: 3}
-    upgradedTurret: {fileID: 6437514599564449339, guid: ade5baf4963b447459d1a3eeea51b8f8, type: 3}
+    upgradedTurret: {fileID: 799638447413801959, guid: c438a7f48ce742540a9eff381fd3bf24, type: 3}
     selectedUI: {fileID: 0}
     unselectedUI: {fileID: 21300000, guid: 87a7c10811c630045ba03e99adb51719, type: 3}
     buildCost: 1
     upgradeCost: 0.5
     isSelected: 0
   - name: AoE Turret
-    turret: {fileID: 7726758275284384079, guid: 004487385f16fd742ab440f751c457de, type: 3}
+    turret: {fileID: 1235069783717790878, guid: 8bc7d68056b298e47acf97e3c3304523, type: 3}
     upgradedTurret: {fileID: 7726758275284384079, guid: d6e216be046914c46b90d6d31bf648c5, type: 3}
     selectedUI: {fileID: 21300000, guid: b3644d2d70863584091aedb505e73804, type: 3}
     unselectedUI: {fileID: 21300000, guid: de50ed41ab68dbe4ca5ed5f4b68b6b7b, type: 3}
@@ -4649,6 +4649,10 @@ PrefabInstance:
     - target: {fileID: 1262674463582031199, guid: df20c599c13800a4f80ac1b4bc4153c6, type: 3}
       propertyPath: m_Name
       value: Range2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262674463582031199, guid: df20c599c13800a4f80ac1b4bc4153c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1262674463582031199, guid: df20c599c13800a4f80ac1b4bc4153c6, type: 3}
       propertyPath: m_TagString
@@ -14176,7 +14180,7 @@ MonoBehaviour:
   scrollSpeed: 5
   minX: -40
   maxX: 30
-  minY: 30
+  minY: 20
   maxY: 80
   minZ: -60
   maxZ: 30
