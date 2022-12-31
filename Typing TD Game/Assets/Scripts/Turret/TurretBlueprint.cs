@@ -17,6 +17,13 @@ public class TurretBlueprint
 
     public float GetSellAmount()
     {
-        return buildCost/2;
+        return buildCost/2;  
     }
+
+    public float GetSellAmount_Upgraded()
+    {
+        return buildCost+upgradeCost/2;
+    }
+
+
 }

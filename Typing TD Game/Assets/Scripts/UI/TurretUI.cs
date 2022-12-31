@@ -47,15 +47,17 @@ public class TurretUI : MonoBehaviour
             upgradeCost.text = target.turretBlueprint.upgradeCost.ToString();
             upgradeButton.interactable = true;
             moneyIcon.SetActive(true);
+            sellAmount.text = target.turretBlueprint.GetSellAmount().ToString();
         }
         else if(target.isUpgraded)
         {
             upgradeCost.text = "MAX";
             upgradeButton.interactable = false;
             moneyIcon.SetActive(false);
+            sellAmount.text = target.turretBlueprint.GetSellAmount_Upgraded().ToString();
         }
 
-        sellAmount.text = target.turretBlueprint.GetSellAmount().ToString();
+   
 
         UI.SetActive(true);
     }

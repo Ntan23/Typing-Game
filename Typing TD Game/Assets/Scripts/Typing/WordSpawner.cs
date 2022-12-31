@@ -11,8 +11,12 @@ public class WordSpawner : MonoBehaviour
     
     public WordDisplay SpawnTheWord()
     {
+        // index
+        int idx = 8;
         // create obj
         GameObject wordObj = Instantiate(wordPrefab, wordCanvas);
+
+        wordObj.transform.SetSiblingIndex(idx);
 
         // get reference from WordDisplay Script
         WordDisplay wordDisplay = wordObj.GetComponent<WordDisplay>();

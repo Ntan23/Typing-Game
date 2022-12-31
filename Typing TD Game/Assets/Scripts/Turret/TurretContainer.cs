@@ -153,8 +153,17 @@ public class TurretContainer : MonoBehaviour
 
     public void SellTurret()
     {
+        if(!isUpgraded)
+        {
         PlayerStats.money += turretBlueprint.GetSellAmount();
-        MoneyUI.needUpdate = true;
+        }
+
+        else if(isUpgraded)
+        {
+        PlayerStats.money += turretBlueprint.GetSellAmount_Upgraded();
+        }
+       
+        MoneyUI.needUpdate = true; 
 
         //Spawn A Sell Effect
         GameObject effect = (GameObject) Instantiate(buildManager.sellEffect,GetBuildPosition(),Quaternion.identity);
@@ -162,5 +171,6 @@ public class TurretContainer : MonoBehaviour
 
         Destroy(turret);
         turretBlueprint = null;
+        isUpgraded = false;
     }
 }
