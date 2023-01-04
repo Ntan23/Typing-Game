@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            canMove = !canMove;
+            changeMode();
         }
 
         if(canMove && !GameManager.instance.gameEnded)
@@ -73,4 +73,8 @@ public class CameraController : MonoBehaviour
         transform.position = position;
     }
 
+    public void changeMode()
+    {
+        canMove = !canMove;
+    }
 }
