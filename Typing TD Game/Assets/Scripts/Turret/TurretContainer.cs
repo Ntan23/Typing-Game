@@ -119,7 +119,7 @@ public class TurretContainer : MonoBehaviour
         PlayerStats.money -= blueprint.buildCost;
         MoneyUI.needUpdate = true;
 
-        GameObject _turret = (GameObject) Instantiate(blueprint.turret,GetBuildPosition(),Quaternion.identity);
+        GameObject _turret = (GameObject) Instantiate(blueprint.turret,GetBuildPosition(),blueprint.turret.transform.rotation);
         turret = _turret;
         // Debug.Log("Turret Build! Money left : "+PlayerStats.money);
 

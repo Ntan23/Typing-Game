@@ -21,6 +21,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         gm = GameManager.instance;
+        waveIndexText.text = "Wave " + waveIndex.ToString() + "/" + waves.Length.ToString();
     }
 
     private void Update()
@@ -80,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
 
     void ConvertManaToMoney()
     {
-        PlayerStats.money += gm.ManaCount*0.1f;
+        PlayerStats.money += Mathf.Floor(gm.ManaCount*0.1f);
         MoneyUI.needUpdate = true;
         gm.ManaCount = 0;
         gm.UpdateManaBar();

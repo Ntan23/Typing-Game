@@ -38,9 +38,9 @@ public class WordManager : MonoBehaviour
     // private Animator anim;
     private CooldownTimer cooldownTimer;
     private Translation translation;
-    public static int manaCount = 10;
+    public int manaCount = 15;
 
-   GameManager gm;
+    GameManager gm;
 
 
     // Start is called before the first frame update

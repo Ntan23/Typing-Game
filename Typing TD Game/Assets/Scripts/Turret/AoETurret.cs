@@ -21,7 +21,7 @@ public class AoETurret : MonoBehaviour
     void Start()
     {
         gm = GameManager.instance;
-        InvokeRepeating("CheckForEnemy",0.0f,1.0f);
+        InvokeRepeating("CheckForEnemy",0.0f,2.0f);
     }
 
     // Update is called once per frame
