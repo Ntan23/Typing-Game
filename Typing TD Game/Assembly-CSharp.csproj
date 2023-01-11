@@ -81,6 +81,7 @@
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret.cs" />
+     <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Scripts\UI\MoneyUI.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -108,7 +109,6 @@
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\Manager\PlayerStats.cs" />
      <Compile Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Scripts\LevelSelector.cs" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />

@@ -56,6 +56,8 @@ public class WaveSpawner : MonoBehaviour
     {
         Wave wave = waves[waveIndex];
 
+        enemiesAlive = wave.enemyCount;
+
         for(int i = 0;i < wave.enemyCount;i++)
         {
             SpawnEnemy(wave.enemy);
@@ -68,7 +70,6 @@ public class WaveSpawner : MonoBehaviour
 
         if(waveIndex == waves.Length)
         {
-            Debug.Log("You Win The Game !");
             this.enabled = false;
         }
     }
@@ -76,7 +77,6 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy,spawnPoint.position,spawnPoint.rotation);
-        enemiesAlive++;
     }
 
     void ConvertManaToMoney()
@@ -85,10 +85,5 @@ public class WaveSpawner : MonoBehaviour
         MoneyUI.needUpdate = true;
         gm.ManaCount = 0;
         gm.UpdateManaBar();
-    }
-
-    public float GetEnemyStartSpeed()
-    {
-        return waves[waveIndex].enemy.GetComponent<NavMeshAgent>().speed;
     }
 }

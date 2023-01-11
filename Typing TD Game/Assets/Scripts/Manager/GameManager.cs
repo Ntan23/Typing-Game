@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,12 +26,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float EnemyHitDamage;
     public GameObject gameOverUI;
     public GameObject VictoryUI;
+    public string nextLevel;
+    public int levelToUnlock;
     [SerializeField] private Image moneyBarImg;
     [SerializeField] private Image healthBar;
     public float ManaCount = 0f;
     public float MaxMana = 100f;
     public Image ManaImg;
-
     public WaveSpawner waveSpawner;
 
     // Start is called before the first frame update
@@ -72,13 +74,15 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Victory()
     {
+        Debug.Log("You Win The Game");
         gameEnded = true;
+        PlayerPrefs.SetInt("levelReached",levelToUnlock);
         VictoryUI.SetActive(true);
         yield return new WaitForSeconds(2.5f);
         Time.timeScale = 0;
     }
 
-     public void UpdateMoneyBar()
+    public void UpdateMoneyBar()
 	{
 		moneyBarImg.fillAmount = PlayerStats.moneyBar/5;
 		
@@ -150,5 +154,11 @@ public class GameManager : MonoBehaviour
     public void UpdateManaBar()
     {
         ManaImg.fillAmount = ManaCount/MaxMana;
+    }
+
+    public void WinLevel()
+    {
+        Debug.Log("Going To Next Level");
+        SceneManager.LoadScene(nextLevel);
     }
 }

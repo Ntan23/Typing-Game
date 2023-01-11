@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 81.95
+  m_fontSize: 71.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5585,9 +5585,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269891778}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1567107977}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: WinLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8311,7 +8311,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85.15
+  m_fontSize: 74.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8395,21 +8395,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 7411845652544775666, guid: d79edc0e43c49bb41b5ed7ebfc1d0d49, type: 3}
-    enemyCount: 2
+    enemyCount: 1
     rate: 10
   - enemy: {fileID: 7411845652544775666, guid: d79edc0e43c49bb41b5ed7ebfc1d0d49, type: 3}
     enemyCount: 3
     rate: 10
-  - enemy: {fileID: 7411845652544775666, guid: 0475bda7f29cdff45ab34321c3c2645c, type: 3}
-    enemyCount: 4
-    rate: 10
-  - enemy: {fileID: 7411845652544775666, guid: 0475bda7f29cdff45ab34321c3c2645c, type: 3}
-    enemyCount: 4
-    rate: 10
-  - enemy: {fileID: 7411845652544775666, guid: 09c6d896f774a3d48abd84cad52e9c7d, type: 3}
-    enemyCount: 5
-    rate: 10
-  - enemy: {fileID: 7411845652544775666, guid: 09c6d896f774a3d48abd84cad52e9c7d, type: 3}
+  - enemy: {fileID: 7411845652544775666, guid: d79edc0e43c49bb41b5ed7ebfc1d0d49, type: 3}
     enemyCount: 5
     rate: 10
   spawnPoint: {fileID: 68330355}
@@ -8462,7 +8453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b679a870f5db274cba7edaf41b2d7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 4
+  startMoney: 2
   startingHealth: 100
 --- !u!114 &1567107977
 MonoBehaviour:
@@ -8480,6 +8471,8 @@ MonoBehaviour:
   EnemyHitDamage: 25
   gameOverUI: {fileID: 1375728034}
   VictoryUI: {fileID: 1269891776}
+  nextLevel: Level 2
+  levelToUnlock: 2
   moneyBarImg: {fileID: 1537521623}
   healthBar: {fileID: 1694512550}
   ManaCount: 0
@@ -9644,7 +9637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1785842061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9661,10 +9654,10 @@ RectTransform:
   m_Father: {fileID: 61943583}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 2052.6084, y: -96.558}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785842062
 MonoBehaviour:
