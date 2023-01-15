@@ -118,7 +118,7 @@ public class WordManager : MonoBehaviour
             {
                 gm.IncreaseMana(manaCount);
             }
-           
+            AudioManager.instance.PlayAudio("Win");
             hasActiveWord = false;
             words.Remove(activeWord);
 
