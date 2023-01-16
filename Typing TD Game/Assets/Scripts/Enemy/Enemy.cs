@@ -25,11 +25,12 @@ public class Enemy : MonoBehaviour
     {
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		gameManager = GameManager.instance;
-		aoETurret = FindObjectOfType<AoETurret>();
+		CheckAoETurret();
         health = startHealth;
 		startSpeed = navMeshAgent.speed;
 		healthBar.color = Color.green;
 		
+		InvokeRepeating("CheckAoETurret",0.0f,1.0f);
 		if(aoETurret != null)
 		{
 			InvokeRepeating("UnSlow",0.0f,aoETurret.slowDuration);
@@ -88,6 +89,11 @@ public class Enemy : MonoBehaviour
     {
         healthImage.transform.rotation = Quaternion.Euler(40,0,0);
     }
+
+	public void CheckAoETurret()
+	{
+		aoETurret = FindObjectOfType<AoETurret>();
+	}
 
 	public void Slow(float slowSpeed)
 	{

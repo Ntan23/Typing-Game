@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPoint;
     public float timeBetweenWaves = 5.0f;
     public float countdown = 2.0f;
-    public static int waveIndex = 0;
+    public static int waveIndex;
     public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveIndexText;
     public bool nextwave = false;
@@ -21,6 +21,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         gm = GameManager.instance;
+        waveIndex = 0;
         waveIndexText.text = "Wave " + waveIndex.ToString() + "/" + waves.Length.ToString();
     }
 

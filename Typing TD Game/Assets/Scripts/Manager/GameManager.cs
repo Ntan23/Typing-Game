@@ -21,13 +21,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public bool gameEnded;
+    public bool gameEnded = false;
     float startingHealth;
     [SerializeField] private float EnemyHitDamage;
     public GameObject gameOverUI;
     public GameObject VictoryUI;
     public string nextLevel;
     public int levelToUnlock;
+    public int maxLevel;
     [SerializeField] private Image moneyBarImg;
     [SerializeField] private Image healthBar;
     public float ManaCount = 0f;
@@ -55,31 +56,35 @@ public class GameManager : MonoBehaviour
 
         if(PlayerStats.health <= 0)
         {
-            StartCoroutine(Defeat());
+           Defeat();
         }
 
         if(WaveSpawner.waveIndex == waveSpawner.waves.Length && WaveSpawner.enemiesAlive == 0 && PlayerStats.health > 0)
         {
-            StartCoroutine(Victory());
+            Victory();
         }
     }
 
-    IEnumerator Defeat()
+    void Defeat()
     {
         gameEnded = true;
         gameOverUI.SetActive(true);
-        yield return new WaitForSeconds(2.5f);
-        Time.timeScale = 0;
+        // yield return new WaitForSeconds(2.5f);
+        // Time.timeScale = 0;
     }
 
-    IEnumerator Victory()
+    void Victory()
     {
         Debug.Log("You Win The Game");
         gameEnded = true;
-        PlayerPrefs.SetInt("levelReached",levelToUnlock);
+        if(levelToUnlock <= maxLevel)
+        {
+            PlayerPrefs.SetInt("levelReached",levelToUnlock);
+        }
+
         VictoryUI.SetActive(true);
-        yield return new WaitForSeconds(2.5f);
-        Time.timeScale = 0;
+        // yield return new WaitForSeconds(2.5f);
+        // Time.timeScale = 0;
     }
 
     public void UpdateMoneyBar()

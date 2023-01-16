@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000090599, y: -80}
-  m_SizeDelta: {x: 323.5, y: 79.36328}
+  m_AnchoredPosition: {x: 0, y: -147.28}
+  m_SizeDelta: {x: 863.6702, y: 294.5529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44824055
 MonoBehaviour:
@@ -208,15 +208,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 98.6
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 100
   m_fontStyle: 32
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1530,9 +1530,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1618,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.8433, y: -55}
-  m_SizeDelta: {x: 317.19, y: 342.6395}
+  m_AnchoredPosition: {x: 0, y: -106}
+  m_SizeDelta: {x: 715.6103, y: 535.5852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815466654
 MonoBehaviour:
@@ -1641,8 +1641,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 200, y: 100}
-  m_Spacing: {x: 0, y: 20}
+  m_CellSize: {x: 500, y: 150}
+  m_Spacing: {x: 0, y: 100}
   m_Constraint: 1
   m_ConstraintCount: 1
 --- !u!1 &1914108534
@@ -2254,101 +2254,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1247299639bd082438c8e45e5f3caed6, type: 3}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[0].audioName
-      value: Hover2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[1].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e3e670b70c39b074a8c8041bad788156, type: 3}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[1].audioName
-      value: Win
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[2].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cea7d5a8d1f43e040a3be70908592fb3, type: 3}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[2].audioName
-      value: Hover1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[3].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 38bc7d3a1d8810e4f9b90e00f0ef5600, type: 3}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[3].audioName
-      value: Click
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[4].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cea7d5a8d1f43e040a3be70908592fb3, type: 3}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[4].audioName
-      value: Hover1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[0].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[1].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[2].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[3].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[4].audioPitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[0].audioVolume
-      value: 0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[1].audioVolume
-      value: 0.154
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[2].audioVolume
-      value: 0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[3].audioVolume
-      value: 0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251403126159762804, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
-      propertyPath: sounds.Array.data[4].audioVolume
-      value: 0.086
-      objectReference: {fileID: 0}
     - target: {fileID: 4251403126159762805, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251403126159762805, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 326.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251403126159762805, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 162.09012
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251403126159762805, guid: 219d28d83bb5d1549b1bd8c91a5d65c6, type: 3}
       propertyPath: m_LocalPosition.z

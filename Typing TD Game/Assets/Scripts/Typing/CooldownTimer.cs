@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class CooldownTimer : MonoBehaviour
 {
-    public float Duration;
     private float RemainingDuration;
     public Image img;
     public GameObject Cooldown;
     private Color color;
 
-    // private WordManager wordManager;
 
     // Start is called before the first frame update
     void Start()

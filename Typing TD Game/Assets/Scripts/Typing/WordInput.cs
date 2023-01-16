@@ -11,10 +11,10 @@ public class WordInput : MonoBehaviour
     {
        if(GameManager.instance.gameEnded == false)
        {
-        foreach(char alphabet in Input.inputString)
-       {
-            wordManager.TypingLetter(char.ToLower(alphabet));
-       }
+            foreach(char alphabet in Input.inputString)
+            {
+                wordManager.TypingLetter(char.ToLower(alphabet));
+            }
        }
     }
 }

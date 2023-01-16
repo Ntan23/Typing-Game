@@ -8,7 +8,6 @@ public class Shop : MonoBehaviour
     public TurretBlueprint[] turrets;
     BuildManager buildManager;
     public static bool isClicked = true;
-    public Color selectedColor;
     public Image tempImage;
     
     // Start is called before the first frame update
@@ -30,14 +29,14 @@ public class Shop : MonoBehaviour
         
         if(!turrets[0].isSelected)
         {
-            buttonImg.color = selectedColor;
+            buttonImg.sprite = turrets[0].selectedUI;
             Debug.Log("Standard Turret Selected");
             buildManager.SelectTurretToBuild(turrets[0]);
             turrets[0].isSelected = true;
         }
         else if(turrets[0].isSelected)
         {
-            buttonImg.color = Color.white;
+            buttonImg.sprite = turrets[0].unselectedUI;
             UnSelectTurret();
             Debug.Log("Deselect Standar Turret");
             turrets[0].isSelected = false;
@@ -49,7 +48,6 @@ public class Shop : MonoBehaviour
         if(turrets[0].isSelected)
         {
             turrets[0].isSelected = false;
-            tempImage.color = Color.white;
             tempImage.sprite = turrets[0].unselectedUI;
             UnSelectTurret();
         }

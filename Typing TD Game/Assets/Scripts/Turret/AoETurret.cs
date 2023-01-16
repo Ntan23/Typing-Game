@@ -21,6 +21,7 @@ public class AoETurret : MonoBehaviour
     void Start()
     {
         gm = GameManager.instance;
+
         InvokeRepeating("CheckForEnemy",0.0f,2.0f);
     }
 

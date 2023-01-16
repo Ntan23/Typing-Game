@@ -4,15 +4,11 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sounds[] sounds;
-
     public static AudioManager instance;
-
 
     // Start is called before the first frame update
     void Awake()
     {
-
         if(instance == null)
         {
             instance = this;
@@ -24,36 +20,40 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Kalau Main Menu mau ada bgm truss
         DontDestroyOnLoad(gameObject);
+
         foreach(Sounds currsound in sounds)
         {
-           currsound.audioSource =  gameObject.AddComponent<AudioSource>();
+            currsound.audioSource =  gameObject.AddComponent<AudioSource>();
 
-           currsound.audioSource.clip = currsound.audioClip;
+            currsound.audioSource.clip = currsound.audioClip;
 
-           currsound.audioSource.volume = currsound.audioVolume;
+            currsound.audioSource.volume = currsound.audioVolume;
 
-           currsound.audioSource.pitch = currsound.audioPitch;
+            currsound.audioSource.pitch = currsound.audioPitch;
 
-           currsound.audioSource.loop = currsound.isLoop;
+            currsound.audioSource.loop = currsound.isLoop;
         }
     }
     
-    private void Start() {
+
+    public Sounds[] sounds;
+
+    private void Start()
+    {
         
     }
 
     public void PlayAudio(string nameAudio)
     {
-       Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
-       if(currsound == null) 
-       {
+      Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
+      if(currsound == null) 
+      {
         Debug.Log("Error! " + nameAudio + "Not found!");
-         return;
-       }
+        return;
+      }
       
-       currsound.audioSource.Play();
+      currsound.audioSource.Play();
     }
 
      public void PlayAudioShot(string nameAudio)
@@ -61,11 +61,11 @@ public class AudioManager : MonoBehaviour
        Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
        if(currsound == null) 
        {
-        Debug.Log("Error! " + nameAudio + "Not found!");
-         return;
+          Debug.Log("Error! " + nameAudio + "Not found!");
+          return;
        }
        else{
-         currsound.audioSource.PlayOneShot(currsound.audioClip);
+          currsound.audioSource.PlayOneShot(currsound.audioClip);
        }
     }
 
