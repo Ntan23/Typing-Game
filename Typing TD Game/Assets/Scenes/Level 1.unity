@@ -382,7 +382,6 @@ MonoBehaviour:
     buildCost: 2
     upgradeCost: 1.5
     isSelected: 0
-  selectedColor: {r: 0.8584906, g: 0.10852615, b: 0.10852615, a: 0.9019608}
   tempImage: {fileID: 0}
 --- !u!1 &68330351
 GameObject:
@@ -8546,10 +8545,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1601518545}
   - component: {fileID: 1601518544}
-  - component: {fileID: 1601518543}
   - component: {fileID: 1601518542}
   - component: {fileID: 1601518541}
   - component: {fileID: 1601518540}
+  - component: {fileID: 1601518546}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -8600,19 +8599,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordPrefab: {fileID: 8306428294096595132, guid: e75aa49719c5f7442aae5cc0a26a9b13, type: 3}
   wordCanvas: {fileID: 573865233}
---- !u!114 &1601518543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601518539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbd6f2a709d1874f87266bed0c43295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wordManager: {fileID: 1601518544}
 --- !u!114 &1601518544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8647,6 +8633,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1601518546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601518539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7768813e190bc4ebe26336b7a1ce05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordManager: {fileID: 1601518544}
 --- !u!1 &1621842421
 GameObject:
   m_ObjectHideFlags: 0
