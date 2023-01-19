@@ -36,9 +36,12 @@ public class GameManager : MonoBehaviour
     public Image ManaImg;
     public WaveSpawner waveSpawner;
 
+    AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
+        am= AudioManager.instance;
         gameEnded = false;
         startingHealth = PlayerStats.health;
         healthBar.color = Color.green;
@@ -117,6 +120,7 @@ public class GameManager : MonoBehaviour
 		MoneyUI.needUpdate = true;
 		PlayerStats.moneyBar = 0;
         moneyBarImg.fillAmount = 0;
+        am.PlayAudio("Currency");
     }
 
     public void HitDamage()

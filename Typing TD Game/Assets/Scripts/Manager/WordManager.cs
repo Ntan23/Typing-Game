@@ -54,8 +54,9 @@ public class WordManager : MonoBehaviour
 
         //Debug Purpose show random word
         //Debug.Log(word.word);
-       
+        am.PlayAudio("WordSpawn");
         words.Add(word);
+        
         // play animation
         //anim.Play("TextFadein");
     }
@@ -67,6 +68,7 @@ public class WordManager : MonoBehaviour
             if(activeWord.GetNextAlphabet() == alphabet || activeWord.GetNextAlphabet() == alphabet)
             {
                 activeWord.TypeAlphabet();
+                am.PlayAudioShot("Typing");
             }
         }
         else

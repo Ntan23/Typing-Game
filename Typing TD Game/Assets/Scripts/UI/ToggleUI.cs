@@ -8,6 +8,7 @@ public class ToggleUI : MonoBehaviour
     public Image image_toggleoff;
     public Image image_toggleon;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class ToggleUI : MonoBehaviour
     {
         image_toggleoff.gameObject.SetActive(false);
         image_toggleon.gameObject.SetActive(true);
+        
     }
 
     public void Toggle_OFF()

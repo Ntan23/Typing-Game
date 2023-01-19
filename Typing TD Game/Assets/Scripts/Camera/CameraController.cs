@@ -16,10 +16,14 @@ public class CameraController : MonoBehaviour
     public float maxZ;
 
     private ToggleUI toggleUI;
+
+    AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
         toggleUI = FindObjectOfType<ToggleUI>();
+        am = AudioManager.instance;
     }
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class CameraController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             changeMode();
+            am.PlayAudioShot("Focus");
         }
 
         if(canMove && !GameManager.instance.gameEnded)

@@ -14,9 +14,13 @@ public class ShakeDamage : MonoBehaviour
     Color dmgcolor;
 
     public AnimationCurve curve;
+
+    AudioManager am;
     void Start()
     {
        dmgIndicator = GameObject.FindGameObjectWithTag("Indicator").GetComponent<Image>();
+
+       am= AudioManager.instance;
     }
 
     // Update is called once per frame
@@ -34,6 +38,7 @@ public class ShakeDamage : MonoBehaviour
 
         if(isDmged)
         {
+            am.PlayAudioShot("Damaged");
             StartCoroutine(Shake());
             getDmged();
             isDmged = false;
