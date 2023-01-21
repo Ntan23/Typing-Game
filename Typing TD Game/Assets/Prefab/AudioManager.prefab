@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4251403126159762805}
   - component: {fileID: 4251403126159762804}
-  - component: {fileID: 7443410265617162562}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -46,135 +45,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - audioName: Hover2
-    audioClip: {fileID: 8300000, guid: 1247299639bd082438c8e45e5f3caed6, type: 3}
-    audioVolume: 0.2
-    audioPitch: 1
-    isLoop: 0
-    audioSource: {fileID: 0}
   - audioName: TypeComplete
-    audioClip: {fileID: 8300000, guid: 1247299639bd082438c8e45e5f3caed6, type: 3}
-    audioVolume: 0.2
+    audioClip: {fileID: 8300000, guid: d03edd90849664f4ea31a24452156061, type: 3}
+    audioVolume: 0.1
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
   - audioName: Hover1
     audioClip: {fileID: 8300000, guid: cea7d5a8d1f43e040a3be70908592fb3, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Hover2
+    audioClip: {fileID: 8300000, guid: 1247299639bd082438c8e45e5f3caed6, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Hover3
+    audioClip: {fileID: 8300000, guid: 3821ab4a1a848d64ea7b9a7495d264f3, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Hover4
+    audioClip: {fileID: 8300000, guid: 392972454fe45bd429519854d4f755b9, type: 3}
     audioVolume: 0.2
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
   - audioName: Click
     audioClip: {fileID: 8300000, guid: 38bc7d3a1d8810e4f9b90e00f0ef5600, type: 3}
-    audioVolume: 0.2
+    audioVolume: 0.1
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
   - audioName: Click2
     audioClip: {fileID: 8300000, guid: 2967f956dacb3284d92af0e9c867adaf, type: 3}
-    audioVolume: 0.2
+    audioVolume: 0.1
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
-  - audioName: Hover3
-    audioClip: {fileID: 8300000, guid: 3821ab4a1a848d64ea7b9a7495d264f3, type: 3}
-    audioVolume: 0.2
+  - audioName: Typing
+    audioClip: {fileID: 8300000, guid: e848bd46313b70b48a251182db4b67e4, type: 3}
+    audioVolume: 0.5
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
---- !u!82 &7443410265617162562
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251403126159762810}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  - audioName: WordSpawn
+    audioClip: {fileID: 8300000, guid: 9139631c28ad5294e959124c42788942, type: 3}
+    audioVolume: 0.3
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Focus
+    audioClip: {fileID: 8300000, guid: f218b9f13fbf0684a9f02cfd6804199c, type: 3}
+    audioVolume: 0.3
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Damaged
+    audioClip: {fileID: 8300000, guid: ad789ea90a90a9c41afa0322002bf2b9, type: 3}
+    audioVolume: 0.3
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Currency
+    audioClip: {fileID: 8300000, guid: 8e25d07f58d8aed4b98101bc6315ea36, type: 3}
+    audioVolume: 0.5
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}

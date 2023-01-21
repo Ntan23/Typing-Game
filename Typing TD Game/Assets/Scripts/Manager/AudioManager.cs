@@ -12,15 +12,8 @@ public class AudioManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-
-        else if(instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        // DontDestroyOnLoad(gameObject);
 
         foreach(Sounds currsound in sounds)
         {
@@ -46,27 +39,27 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(string nameAudio)
     {
-      Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
-      if(currsound == null) 
-      {
-        Debug.Log("Error! " + nameAudio + "Not found!");
-        return;
-      }
-      
-      currsound.audioSource.Play();
+        Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
+        if(currsound == null) 
+        {
+            Debug.Log("Error! " + nameAudio + "Not found!");
+            return;
+        }
+        
+        currsound.audioSource.Play();
     }
 
      public void PlayAudioShot(string nameAudio)
     {
-       Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
-       if(currsound == null) 
-       {
-          Debug.Log("Error! " + nameAudio + "Not found!");
-          return;
-       }
-       else{
-          currsound.audioSource.PlayOneShot(currsound.audioClip);
-       }
+        Sounds currsound = Array.Find(sounds, sounds => sounds.audioName == nameAudio);
+        if(currsound == null) 
+        {
+            Debug.Log("Error! " + nameAudio + "Not found!");
+            return;
+        }
+        else{
+            currsound.audioSource.PlayOneShot(currsound.audioClip);
+        }
     }
 
     

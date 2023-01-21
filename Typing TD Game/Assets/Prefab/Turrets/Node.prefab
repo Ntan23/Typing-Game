@@ -111,6 +111,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.5019608}
-  notEnoughMoneyColor: {r: 0.8584906, g: 0.124724075, b: 0.124724075, a: 1}
   turretOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
+  turretBlueprint:
+    name: 
+    turret: {fileID: 0}
+    upgradedTurret: {fileID: 0}
+    selectedUI: {fileID: 0}
+    unselectedUI: {fileID: 0}
+    buildCost: 0
+    upgradeCost: 0
+    isSelected: 0
+  isUpgraded: 0

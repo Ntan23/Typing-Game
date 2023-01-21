@@ -68,7 +68,7 @@ public class WordManager : MonoBehaviour
             if(activeWord.GetNextAlphabet() == alphabet || activeWord.GetNextAlphabet() == alphabet)
             {
                 activeWord.TypeAlphabet();
-                am.PlayAudioShot("Typing");
+                am.PlayAudio("Typing");
             }
         }
         else

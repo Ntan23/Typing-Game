@@ -17,10 +17,12 @@ public class WaveSpawner : MonoBehaviour
     public bool nextwave = false;
     
     GameManager gm;
+    AudioManager am;
     
     void Start()
     {
         gm = GameManager.instance;
+        am = AudioManager.instance;
         waveIndex = 0;
         waveIndexText.text = "Wave " + waveIndex.ToString() + "/" + waves.Length.ToString();
     }
@@ -35,12 +37,11 @@ public class WaveSpawner : MonoBehaviour
         if(enemiesAlive == 0 && nextwave == false)
         {
             ConvertManaToMoney();
-            nextwave= true;
+            nextwave = true;
         }
 
         if(countdown <= 0 && nextwave)
         {   
-            // ConvertManaToMoney();
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             nextwave = false;
@@ -82,7 +83,8 @@ public class WaveSpawner : MonoBehaviour
 
     void ConvertManaToMoney()
     {
-        PlayerStats.money += Mathf.Floor(gm.ManaCount*0.1f);
+        am.PlayAudio("Currency");
+        PlayerStats.money += Mathf.Floor(gm.ManaCount*0.05f);
         MoneyUI.needUpdate = true;
         gm.ManaCount = 0;
         gm.UpdateManaBar();
