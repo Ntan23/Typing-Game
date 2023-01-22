@@ -397,7 +397,7 @@ MonoBehaviour:
     isSelected: 0
   - name: AoE Turret
     turret: {fileID: 1235069783717790878, guid: 8bc7d68056b298e47acf97e3c3304523, type: 3}
-    upgradedTurret: {fileID: 7726758275284384079, guid: d6e216be046914c46b90d6d31bf648c5, type: 3}
+    upgradedTurret: {fileID: 72196278807342327, guid: 4bfe78fee3ac1ad469f3d6a3cbd9c5f8, type: 3}
     selectedUI: {fileID: 21300000, guid: f997337a0ec334b49b6f52ab8277438d, type: 3}
     unselectedUI: {fileID: 21300000, guid: 1a84694154db3444fa96e13d110717f8, type: 3}
     buildCost: 2

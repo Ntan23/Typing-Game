@@ -20,7 +20,7 @@ public class ShakeDamage : MonoBehaviour
     {
        dmgIndicator = GameObject.FindGameObjectWithTag("Indicator").GetComponent<Image>();
 
-       am= AudioManager.instance;
+       am = AudioManager.instance;
     }
 
     // Update is called once per frame
