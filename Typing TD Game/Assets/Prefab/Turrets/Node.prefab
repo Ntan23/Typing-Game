@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0be0170c4a243c34cb118c957de194b9, type: 2}
+  - {fileID: 2100000, guid: 36c67a3f60d132e4d899f914dbe38833, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7aefd11074cf64187cc0ea146564f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.5019608}
+  hoverMaterial: {fileID: 2100000, guid: cf73166ff9ba6494cb58e30b6d232ace, type: 2}
+  cannotBuildMaterial: {fileID: 2100000, guid: 33e43424a52bed44db4632b011d6bc3b, type: 2}
   turretOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   turretBlueprint:

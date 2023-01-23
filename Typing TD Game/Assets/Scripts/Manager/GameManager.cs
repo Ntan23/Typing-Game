@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     public float ManaCount = 0f;
     public float MaxMana = 100f;
     public Image ManaImg;
-    public WaveSpawner waveSpawner;
+    public Vector3 destinationPoint;
+    WaveSpawner waveSpawner;
 
     AudioManager am;
 
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         am= AudioManager.instance;
+        waveSpawner = GetComponent<WaveSpawner>();
         gameEnded = false;
         startingHealth = PlayerStats.health;
         healthBar.color = Color.green;

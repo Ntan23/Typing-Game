@@ -5,8 +5,11 @@ using UnityEngine.EventSystems;
 
 public class TurretContainer : MonoBehaviour
 {
-    public Color hoverColor;
-    private Color startColor;
+    // public Color hoverColor;
+    // private Color startColor;
+    public Material hoverMaterial;
+    public Material cannotBuildMaterial;
+    private Material startMaterial;
     private Renderer objectRenderer;
     public Vector3 turretOffset;
     [HideInInspector] public GameObject turret;
@@ -21,7 +24,8 @@ public class TurretContainer : MonoBehaviour
         buildManager = BuildManager.instance;
         gm = GameManager.instance;
         objectRenderer = GetComponent<Renderer>();
-        startColor = objectRenderer.material.color;
+        // startColor = objectRenderer.material.color;
+        startMaterial = objectRenderer.material;
     }
 
     public Vector3 GetBuildPosition()
@@ -43,10 +47,10 @@ public class TurretContainer : MonoBehaviour
         
         if(turret != null)
         {
-            hoverColor = Color.red;
+           objectRenderer.material = cannotBuildMaterial;
         }
 
-        objectRenderer.material.color = buildManager.HasMoney ? hoverColor : Color.red;
+        objectRenderer.material = buildManager.HasMoney ? hoverMaterial : cannotBuildMaterial;
 
         // if(buildManager.HasMoney)
         // {
@@ -64,7 +68,7 @@ public class TurretContainer : MonoBehaviour
         {
             if(turretBlueprint.isSelected)
             {
-                objectRenderer.material.color = Color.red;
+                objectRenderer.material = cannotBuildMaterial;
             }
             else if(!turretBlueprint.isSelected)
             {
@@ -79,7 +83,7 @@ public class TurretContainer : MonoBehaviour
 
     private void OnMouseExit()
     {
-        objectRenderer.material.color = startColor;
+        objectRenderer.material = startMaterial;
     }
 
     private void OnMouseDown()

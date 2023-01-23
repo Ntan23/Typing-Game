@@ -35,7 +35,6 @@ public class WordGenerator : MonoBehaviour
     private void Awake()
     {
         ReadTextAsset();
-        // debug purpose
         // Debug.Log(wordList.Length);
         // Debug.Log(indoList.Length);
     }

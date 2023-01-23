@@ -25,16 +25,12 @@ public class Enemy : MonoBehaviour
     {
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		gameManager = GameManager.instance;
-		CheckAoETurret();
+		// CheckAoETurret();
         health = startHealth;
 		startSpeed = navMeshAgent.speed;
 		healthBar.color = Color.green;
 		
-		InvokeRepeating("CheckAoETurret",0.0f,1.0f);
-		if(aoETurret != null)
-		{
-			InvokeRepeating("UnSlow",0.0f,aoETurret.slowDuration);
-		}
+		// InvokeRepeating("CheckAoETurret",0.0f,1.0f);
     }
 
 	public void TakeDamage (float damage)
@@ -90,10 +86,10 @@ public class Enemy : MonoBehaviour
         healthImage.transform.rotation = Quaternion.Euler(40,0,0);
     }
 
-	public void CheckAoETurret()
-	{
-		aoETurret = FindObjectOfType<AoETurret>();
-	}
+	// public void CheckAoETurret()
+	// {	
+	// 	aoETurret = FindObjectOfType<AoETurret>();
+	// }
 
 	public void Slow(float slowSpeed)
 	{
@@ -105,6 +101,7 @@ public class Enemy : MonoBehaviour
 	{
 		if(navMeshAgent.speed != startSpeed || navMeshAgent.acceleration != startSpeed)
 		{
+			Debug.Log("Unslow");
 			navMeshAgent.speed = startSpeed;
 			navMeshAgent.acceleration = startSpeed;
 		}

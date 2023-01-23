@@ -121,7 +121,7 @@
      <None Include="Assets\Assets\JMO Assets\Cartoon FX (legacy)\CartoonFX Free.txt" />
      <None Include="Assets\Assets\Word Database\englishword.txt" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-     <None Include="Assets\GroundTiles\unlitbackfaceoffground.shader" />
+     <None Include="Assets\Assets\GroundTiles\unlitbackfaceoffground.shader" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
      <None Include="Assets\TextMesh_Pro\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />

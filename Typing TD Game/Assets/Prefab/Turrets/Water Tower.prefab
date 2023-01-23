@@ -179,11 +179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 10
-  damage: 10
+  damage: 5
   manaCost: 2
   startSpeed: 5
   slowSpeed: 2
-  slowDuration: 4
+  slowDuration: 3
   impactFX: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
   AoEFX: {fileID: 7559136697235298124}
 --- !u!1 &1794241967152434925

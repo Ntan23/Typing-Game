@@ -57,8 +57,6 @@ public class AoETurret : MonoBehaviour
         {
             if(c.CompareTag("Enemy"))
             {
-                // enemyCount++;
-                // Debug.Log("Enemy Count : "+enemyCount);
                 if(gm.ManaCount >= manaCost)
                 {
                     StartCoroutine(CastEffect(0.9f));
@@ -86,6 +84,7 @@ public class AoETurret : MonoBehaviour
         {   
             e.TakeDamage(damage);
             e.Slow(slowSpeed);
+            StartCoroutine(UnSlow(e));
         }
     }
 
@@ -100,5 +99,11 @@ public class AoETurret : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position,attackRadius); 
-    }   
+    }  
+
+    IEnumerator UnSlow(Enemy e)
+    {
+        yield return new WaitForSeconds(slowDuration);
+        e.UnSlow(); 
+    } 
 }
