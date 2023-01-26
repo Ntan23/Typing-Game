@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
 	AoETurret aoETurret;
 	GameManager gameManager;
 
+	AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +31,14 @@ public class Enemy : MonoBehaviour
         health = startHealth;
 		startSpeed = navMeshAgent.speed;
 		healthBar.color = Color.green;
+		am = AudioManager.instance;
 		
 		// InvokeRepeating("CheckAoETurret",0.0f,1.0f);
     }
 
 	public void TakeDamage (float damage)
 	{
+		am.PlayAudioShot("EnemyHurt");
 		health -= damage;
 		
 		UpdateHealthBar();
@@ -42,6 +46,7 @@ public class Enemy : MonoBehaviour
 		if(health <= 0 && !isDead) 
 		{
 			Debug.Log("Enemy Killed!");
+			am.PlayAudioShot("EnemyDeath");
 			Die();
 		}
 	}

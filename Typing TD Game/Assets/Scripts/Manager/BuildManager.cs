@@ -30,10 +30,13 @@ public class BuildManager : MonoBehaviour
     public GameObject upgradeEffect;
     public TurretUI turretUI;
 
+    AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
         // turretToBuild = standardTurret;
+        am = AudioManager.instance;
     }
 
     // Update is called once per frame
@@ -70,6 +73,7 @@ public class BuildManager : MonoBehaviour
 
     public void SelectContainer(TurretContainer container)
     {
+        am.PlayAudioShot("Click2");
         if(selectedTurretContainer == container)
         {
             DeselectContainer();

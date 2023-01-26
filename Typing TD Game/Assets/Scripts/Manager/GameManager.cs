@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     void Defeat()
     {
+        am.PlayAudio("Lose");
         gameEnded = true;
         gameOverUI.SetActive(true);
         // yield return new WaitForSeconds(2.5f);
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     void Victory()
     {
+        am.PlayAudio("Win");
         Debug.Log("You Win The Game");
         gameEnded = true;
         if(levelToUnlock <= maxLevel)
@@ -112,6 +114,8 @@ public class GameManager : MonoBehaviour
         if(moneyBarImg.fillAmount == 1)
         {
             StartCoroutine(ResetBarAndAddMoney());
+            // Debug Purpose
+            // Debug.Log(PlayerStats.moneyBar);
         }
 	}
 

@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float damage;
     public float speed;
     public GameObject impactFX;
+
+    AudioManager am;
     
     public void Search(Transform _target)
     {
@@ -17,7 +19,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        am = AudioManager.instance;
     }
 
     // Update is called once per frame
@@ -44,6 +46,8 @@ public class Bullet : MonoBehaviour
     void HitTarget()
     {
         GameObject effects = (GameObject) Instantiate(impactFX,transform.position,transform.rotation);
+
+        am.PlayAudioShot("FireTowerHit");
         
         Destroy(effects,2.0f);
 

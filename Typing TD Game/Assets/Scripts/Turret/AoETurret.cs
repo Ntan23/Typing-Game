@@ -15,13 +15,15 @@ public class AoETurret : MonoBehaviour
     [SerializeField] private GameObject AoEFX;
     GameManager gm;
 
+    AudioManager am;
+
     // private int enemyCount;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.instance;
-
+        am = AudioManager.instance;
         InvokeRepeating("CheckForEnemy",0.0f,2.0f);
     }
 
@@ -70,7 +72,7 @@ public class AoETurret : MonoBehaviour
     void HitTarget(Transform target)
     {
         GameObject effects = (GameObject) Instantiate(impactFX,target.transform.position,Quaternion.Euler(90,0,0));
-
+        am.PlayAudioShot("WaterTowerHit");
         Destroy(effects,2.0f);
         
         Damage(target);

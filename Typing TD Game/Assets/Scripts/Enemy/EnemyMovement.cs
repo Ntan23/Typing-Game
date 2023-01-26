@@ -10,11 +10,14 @@ public class EnemyMovement : MonoBehaviour
     GameManager gm;
     public ShakeDamage shakeDamage;
 
+    AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.instance;
         shakeDamage = FindObjectOfType<ShakeDamage>();
+        am= AudioManager.instance;
     }
 
     // Update is called once per frame
@@ -47,6 +50,7 @@ public class EnemyMovement : MonoBehaviour
 
     void EndPath()
     {
+        am.PlayAudioShot("EnemyAttack");
         gm.HitDamage();
         WaveSpawner.enemiesAlive--;
         shakeDamage.isDmged = true;

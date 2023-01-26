@@ -9,11 +9,14 @@ public class Shop : MonoBehaviour
     BuildManager buildManager;
     public static bool isClicked = true;
     public Image tempImage;
+
+    AudioManager am;
     
     // Start is called before the first frame update
     void Start()
     {
         buildManager = BuildManager.instance;
+        am = AudioManager.instance;
     }
     
     public void SelectStandardTurret(Image buttonImg)
@@ -29,6 +32,7 @@ public class Shop : MonoBehaviour
         
         if(!turrets[0].isSelected)
         {
+            am.PlayAudioShot("FireTowerUI");
             buttonImg.sprite = turrets[0].selectedUI;
             Debug.Log("Standard Turret Selected");
             buildManager.SelectTurretToBuild(turrets[0]);
@@ -36,6 +40,7 @@ public class Shop : MonoBehaviour
         }
         else if(turrets[0].isSelected)
         {
+            am.PlayAudioShot("TowerUI_Deselect");
             buttonImg.sprite = turrets[0].unselectedUI;
             UnSelectTurret();
             Debug.Log("Deselect Standar Turret");
@@ -56,6 +61,7 @@ public class Shop : MonoBehaviour
 
         if(!turrets[1].isSelected)
         {
+            am.PlayAudioShot("WaterTowerUI");
             buttonImg.sprite = turrets[1].selectedUI;
             // buttonImg.color = selectedColor;
             Debug.Log("AoE Turret Selected");
@@ -64,6 +70,7 @@ public class Shop : MonoBehaviour
         }
         else if(turrets[1].isSelected)
         {
+            am.PlayAudioShot("TowerUI_Deselect");
             buttonImg.sprite = turrets[1].unselectedUI;
             // buttonImg.color = Color.white;
             Debug.Log("Deselect AoE Turret");

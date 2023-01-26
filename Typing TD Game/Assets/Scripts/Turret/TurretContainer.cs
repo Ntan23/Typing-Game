@@ -18,6 +18,8 @@ public class TurretContainer : MonoBehaviour
     BuildManager buildManager;
     GameManager gm;
 
+    AudioManager am;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class TurretContainer : MonoBehaviour
         gm = GameManager.instance;
         objectRenderer = GetComponent<Renderer>();
         // startColor = objectRenderer.material.color;
+        am = AudioManager.instance;
         startMaterial = objectRenderer.material;
     }
 
@@ -50,7 +53,9 @@ public class TurretContainer : MonoBehaviour
            objectRenderer.material = cannotBuildMaterial;
         }
 
-        objectRenderer.material = buildManager.HasMoney ? hoverMaterial : cannotBuildMaterial;
+        objectRenderer.material = buildManager.HasMoney ? hoverMaterial  : cannotBuildMaterial;
+
+        am.PlayAudioShot("Node_Hover");    
 
         // if(buildManager.HasMoney)
         // {
@@ -107,6 +112,8 @@ public class TurretContainer : MonoBehaviour
 
         //Build A Turret
         BuildTurret(buildManager.GetTurretToBuild());
+
+
         // GameObject turretToBuild = buildManager.GetTurretToBuild();
 
         // turret = (GameObject) Instantiate(turretToBuild,transform.position + turretOffset,transform.rotation);
@@ -116,6 +123,7 @@ public class TurretContainer : MonoBehaviour
     {
         if(PlayerStats.money < blueprint.buildCost)
         {
+            am.PlayAudioShot("TurretUnable");
             Debug.Log("Not Enough Money To Build That!");
             return;
         }
@@ -124,6 +132,7 @@ public class TurretContainer : MonoBehaviour
         MoneyUI.needUpdate = true;
 
         GameObject _turret = (GameObject) Instantiate(blueprint.turret,GetBuildPosition(),blueprint.turret.transform.rotation);
+        am.PlayAudioShot("PlaceTurret");
         turret = _turret;
         // Debug.Log("Turret Build! Money left : "+PlayerStats.money);
 
@@ -137,6 +146,7 @@ public class TurretContainer : MonoBehaviour
     {
         if(PlayerStats.money < turretBlueprint.upgradeCost)
         {
+            am.PlayAudioShot("TurretUnable");
             Debug.Log("Not Enough Money To Upgrade That!");
             return;
         }
@@ -145,6 +155,8 @@ public class TurretContainer : MonoBehaviour
         MoneyUI.needUpdate = true;
         
         Destroy(turret);
+
+        am.PlayAudioShot("TurretUpgrade");
 
         GameObject _turret = (GameObject) Instantiate(turretBlueprint.upgradedTurret,GetBuildPosition(),Quaternion.identity);
         turret = _turret;
@@ -171,6 +183,7 @@ public class TurretContainer : MonoBehaviour
 
         //Spawn A Sell Effect
         GameObject effect = (GameObject) Instantiate(buildManager.sellEffect,GetBuildPosition(),Quaternion.identity);
+        am.PlayAudioShot("SellTurret");
         Destroy(effect,1.5f);
 
         Destroy(turret);

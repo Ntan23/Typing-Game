@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1;
         WordManager.hasActiveWord= false;
+        WaveSpawner.nextwave = false;
         WaveSpawner.waveIndex = 0;
         PlayerStats.moneyBar = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

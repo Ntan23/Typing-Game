@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class TurretUI : MonoBehaviour
+public class TurretUI : MonoBehaviour, IPointerEnterHandler
 {
     public GameObject UI;
     public TextMeshProUGUI upgradeCost;
@@ -16,6 +17,12 @@ public class TurretUI : MonoBehaviour
     public GameObject Range2;
     private TurretContainer target;
     [SerializeField] Shop shop;
+
+    AudioManager am;
+
+    private void Start(){
+        am = AudioManager.instance;
+    }
 
     public void SetTarget(TurretContainer _target)
     {
@@ -80,4 +87,11 @@ public class TurretUI : MonoBehaviour
         target.SellTurret();
         BuildManager.instance.DeselectContainer();
     }
+
+    public void OnPointerEnter(PointerEventData EventData)
+    {
+        if(upgradeButton.interactable)
+        am.PlayAudioShot("Hover3");
+    }
+
 }

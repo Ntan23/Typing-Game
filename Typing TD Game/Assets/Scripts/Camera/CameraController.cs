@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !GameManager.instance.gameEnded)
         {
             changeMode();
             am.PlayAudioShot("Focus");

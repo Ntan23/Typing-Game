@@ -89,7 +89,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioName: Typing
     audioClip: {fileID: 8300000, guid: e848bd46313b70b48a251182db4b67e4, type: 3}
-    audioVolume: 0.5
+    audioVolume: 0.6
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - audioName: Focus
     audioClip: {fileID: 8300000, guid: f218b9f13fbf0684a9f02cfd6804199c, type: 3}
-    audioVolume: 0.3
+    audioVolume: 0.1
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}
@@ -114,6 +114,108 @@ MonoBehaviour:
   - audioName: Currency
     audioClip: {fileID: 8300000, guid: 8e25d07f58d8aed4b98101bc6315ea36, type: 3}
     audioVolume: 0.5
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: FireTowerUI
+    audioClip: {fileID: 8300000, guid: b3d9f91011958ba4c905c45b22f29c3b, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: TowerUI_Deselect
+    audioClip: {fileID: 8300000, guid: eb4bd7a90b5de5b4dbbd6d9b96185b3d, type: 3}
+    audioVolume: 0.5
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Lose
+    audioClip: {fileID: 8300000, guid: 73e3649e04732e547a919138c8f6b40a, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Win
+    audioClip: {fileID: 8300000, guid: 990b2eddc358cd444aec059f4d44c5ea, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: WaterTowerUI
+    audioClip: {fileID: 8300000, guid: 4d0ce19bcf90165449c046eded07c18f, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: Node_Hover
+    audioClip: {fileID: 8300000, guid: 63473cca49912db49adf90cfb6d1422a, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: PlaceTurret
+    audioClip: {fileID: 8300000, guid: ac2aa6377a79f2643a021d61ab9350aa, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: TurretUpgrade
+    audioClip: {fileID: 8300000, guid: badf40422ec99094f8eafb4b3ca18362, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: FireTowerAttack
+    audioClip: {fileID: 8300000, guid: 681375e00ff4c2144a0938a117f992f8, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: FireTowerHit
+    audioClip: {fileID: 8300000, guid: a309bee2200d4984a8b8b62c8cf5028a, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: WaterTowerHit
+    audioClip: {fileID: 8300000, guid: dd0ca23d829d69a439a9edcb78c91219, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: SellTurret
+    audioClip: {fileID: 8300000, guid: ab8cb33176f52604b9f1e0a0948b35fc, type: 3}
+    audioVolume: 0.1
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: TurretUnable
+    audioClip: {fileID: 8300000, guid: 705b80ba1bc4bfe439f4c0b099433e26, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: EnemyHurt
+    audioClip: {fileID: 8300000, guid: 96c62aee877ca484fab8e30a662b6c17, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: EnemyDeath
+    audioClip: {fileID: 8300000, guid: 663c76f64ef7242499512b199b2b4ebc, type: 3}
+    audioVolume: 0.2
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: EnemyAttack
+    audioClip: {fileID: 8300000, guid: d6c1a55e9138e01499ceb63eca3b90ad, type: 3}
+    audioVolume: 0.3
+    audioPitch: 1
+    isLoop: 0
+    audioSource: {fileID: 0}
+  - audioName: WaveSpawn
+    audioClip: {fileID: 8300000, guid: bb9b0879c9d3bdb4c9234dced4f226fb, type: 3}
+    audioVolume: 0.2
     audioPitch: 1
     isLoop: 0
     audioSource: {fileID: 0}

@@ -19,11 +19,14 @@ public class Turret : MonoBehaviour
     // private float turnSpeed = 5.0f;
     private bool noTarget = true;
     GameManager gm;
+
+    AudioManager am;
     
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.instance;
+        am = AudioManager.instance;
         InvokeRepeating("UpdateTarget",0f,1.0f);
     }
 
@@ -92,6 +95,8 @@ public class Turret : MonoBehaviour
         gm.DecreaseMana(manaCost);
         
         GameObject bulletGO = (GameObject) Instantiate(bullet,firePoint.position,Quaternion.identity);
+
+        am.PlayAudioShot("FireTowerAttack");
 
         Bullet bulletScript = bulletGO.GetComponent<Bullet>();
 

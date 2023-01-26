@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     public static int waveIndex;
     public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveIndexText;
-    public bool nextwave = false;
+    public static bool nextwave = false;
     
     GameManager gm;
     AudioManager am;
@@ -40,8 +40,9 @@ public class WaveSpawner : MonoBehaviour
             nextwave = true;
         }
 
-        if(countdown <= 0 && nextwave)
+        if(countdown <= 0 && nextwave && !gm.gameEnded)
         {   
+            am.PlayAudio("WaveSpawn");
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             nextwave = false;
@@ -60,12 +61,6 @@ public class WaveSpawner : MonoBehaviour
 
         enemiesAlive = wave.enemyCount;
 
-        for(int i = 0;i < wave.enemyCount;i++)
-        {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1.0f/wave.rate);
-        }
-
         waveIndex++;
        
         waveIndexText.text = "Wave " + waveIndex.ToString() + "/" + waves.Length.ToString();
@@ -74,6 +69,13 @@ public class WaveSpawner : MonoBehaviour
         {
             this.enabled = false;
         }
+
+        for(int i = 0;i < wave.enemyCount;i++)
+        {
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1.0f/wave.rate);
+        }
+
     }
 
     void SpawnEnemy(GameObject enemy)
