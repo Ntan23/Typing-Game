@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5603120417704129649}
   - component: {fileID: 5603120417704129648}
   - component: {fileID: 7343155712849737258}
-  - component: {fileID: 1481522287616694181}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -125,21 +124,3 @@ MonoBehaviour:
     upgradeCost: 0
     isSelected: 0
   isUpgraded: 0
---- !u!114 &1481522287616694181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5603120417704129655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0.26337966, g: 0.4339623, b: 0.15761836, a: 1}
-  outlineWidth: 4.34
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
