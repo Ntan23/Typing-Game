@@ -96,19 +96,23 @@ public class Enemy : MonoBehaviour
 	// 	aoETurret = FindObjectOfType<AoETurret>();
 	// }
 
-	public void Slow(float slowSpeed)
+	public void Slow(float slowMultiplier)
 	{
-		navMeshAgent.speed = slowSpeed;
-		navMeshAgent.acceleration = slowSpeed;
+		Debug.Log("Slow");
+		navMeshAgent.speed = startSpeed/slowMultiplier;
+		navMeshAgent.acceleration = startSpeed/slowMultiplier;
 	}
 
 	public void UnSlow()
 	{
-		if(navMeshAgent.speed != startSpeed || navMeshAgent.acceleration != startSpeed)
+		if(navMeshAgent != null)
 		{
-			Debug.Log("Unslow");
-			navMeshAgent.speed = startSpeed;
-			navMeshAgent.acceleration = startSpeed;
+			if(navMeshAgent.speed != startSpeed || navMeshAgent.acceleration != startSpeed)
+			{
+				Debug.Log("Unslow");
+				navMeshAgent.speed = startSpeed;
+				navMeshAgent.acceleration = startSpeed;
+			}
 		}
 		else 
 		{

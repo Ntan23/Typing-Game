@@ -178,12 +178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d33ab8b49ac9d42b8dfac8538e33be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 10
+  attackRadius: 15
   damage: 5
   manaCost: 2
   startSpeed: 5
-  slowSpeed: 2
-  slowDuration: 3
+  slowMultiplier: 2
+  slowDuration: 2
   impactFX: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
   AoEFX: {fileID: 7559136697235298124}
 --- !u!1 &1794241967152434925
@@ -15326,7 +15326,7 @@ Transform:
   m_GameObject: {fileID: 7559136697235298124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7559136696785094699}

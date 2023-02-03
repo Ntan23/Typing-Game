@@ -38,12 +38,12 @@ public class TurretUI : MonoBehaviour, IPointerEnterHandler
             shop.UnSelectTurret();
         }
 
-        if(target.turret.CompareTag("Fire"))
+        if(target.turret.CompareTag("Fire") || target.turret.CompareTag("AoE"))
         {
             Range.SetActive(true);
             Range2.SetActive(false);
         }
-        else if(target.turret.CompareTag("AoE"))
+        else if(target.turret.CompareTag("Fire2") || target.turret.CompareTag("AoE2"))
         {
             Range.SetActive(false);
             Range2.SetActive(true);

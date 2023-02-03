@@ -9,12 +9,11 @@ public class AoETurret : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private int manaCost;
     [SerializeField] private float startSpeed;
-    [SerializeField] private float slowSpeed;
+    [SerializeField] private float slowMultiplier;
     public float slowDuration;
     [SerializeField] private GameObject impactFX;
     [SerializeField] private GameObject AoEFX;
     GameManager gm;
-
     AudioManager am;
 
     // private int enemyCount;
@@ -61,7 +60,7 @@ public class AoETurret : MonoBehaviour
             {
                 if(gm.ManaCount >= manaCost)
                 {
-                    StartCoroutine(CastEffect(0.9f));
+                    StartCoroutine(CastEffect(1.0f));
                     gm.DecreaseMana(manaCost);
                     HitTarget(c.transform);
                 }
@@ -85,7 +84,7 @@ public class AoETurret : MonoBehaviour
         if(e != null)
         {   
             e.TakeDamage(damage);
-            e.Slow(slowSpeed);
+            e.Slow(slowMultiplier);
             StartCoroutine(UnSlow(e));
         }
     }

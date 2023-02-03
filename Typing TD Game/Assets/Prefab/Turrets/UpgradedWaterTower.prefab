@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 72196278807342326}
   m_Layer: 0
   m_Name: UpgradedWaterTower
-  m_TagString: AoE
+  m_TagString: AoE2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,12 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d33ab8b49ac9d42b8dfac8538e33be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 10
+  attackRadius: 20
   damage: 10
-  manaCost: 2
+  manaCost: 3
   startSpeed: 5
-  slowSpeed: 1
-  slowDuration: 5
+  slowMultiplier: 3
+  slowDuration: 4
   impactFX: {fileID: 1687118924408352, guid: 77c69ec12208c4c4380d15e30b6f8f68, type: 3}
   AoEFX: {fileID: 8702315160287559461}
 --- !u!1 &632134380600682116
@@ -904,7 +904,7 @@ Transform:
   m_GameObject: {fileID: 8702315160287559461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8702315161006186562}

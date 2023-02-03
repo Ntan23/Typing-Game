@@ -16,6 +16,8 @@ TagManager:
   - Fire
   - Range2
   - Range
+  - Fire2
+  - AoE2
   layers:
   - Default
   - TransparentFX

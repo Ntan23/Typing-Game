@@ -861,20 +861,20 @@
     <Reference Include="Unity.Services.Core.Environments">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Formats.Alembic.Runtime">
-        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Formats.Alembic.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Formats.Alembic.Editor">
-        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Formats.Alembic.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Alembic.Runtime">
+        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Formats.Alembic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Alembic.Editor">
+        <HintPath>D:\Github Repository\Typing TD Game\Typing TD Game\Library\ScriptAssemblies\Unity.Formats.Alembic.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1732701234793179837}
   m_Layer: 0
   m_Name: UpgradeFireTower
-  m_TagString: Fire
+  m_TagString: Fire2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,9 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f1e6da0e7421f41aafbbf673ee3673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 20
   fireRate: 1
-  manaCost: 1
+  manaCost: 2
   target: {fileID: 0}
   enemyTag: Enemy
   bullet: {fileID: 5527690360869254568, guid: 2f04e64ac95490a4fa95599d0360dc90, type: 3}
